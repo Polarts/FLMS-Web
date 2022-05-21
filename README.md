@@ -1,46 +1,32 @@
-# Getting Started with Create React App
+# Freelancer Mod Studio - Web
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A re-implementation of [Freelancer Mod Studio](https://github.com/FreelancerOdyssey/FreelancerModStudio) using modern Web technologies.
+This project aims to bring a more robust, maintainable, and functional UI to the Freelancer modding experience. The main target is a cross-platform Desktop app, but we also have a side goal to deploy a browser version so that you won't have to download anything.
 
-## Available Scripts
+## Tech Stack
 
-In the project directory, you can run:
+- ### <u>Web Framework:</u> React 18.1.0
+    - <u>Languages:</u> TypeScript, SCSS
+    - <u>State Management:</u> [Mobx](https://mobx.js.org/README.html), MVVM-like
+    - <u>External Libraries:</u>
+        - [rc-dock](https://ticlo.github.io/rc-dock/)
+        - [react-menu](https://szhsin.github.io/react-menu/)
+        - [ini](https://github.com/npm/ini)
+        - [react-three-fiber](https://github.com/pmndrs/react-three-fiber)
 
-### `npm start`
+- ### <u>Desktop Wrapper:</u> [tauri](https://tauri.studio)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Running Locally
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+To run in your browser:
+- `npm start`.
 
-### `npm test`
+To run the desktop environment:
+- Development: `npm start` then `npm run tauri dev`
+- Production: `npm run build` then `npm run tauri build`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Contributing Code
 
-### `npm run build`
+We have plenty of issues in the [Issues page](https://github.com/FreelancerOdyssey/FLMS-Web/issues). If you'd like to be assigned, comment on an issue and request an assignment.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+We use GitHub Projects to keep up with the workflow. Take a look at the [Projects page](https://github.com/orgs/FreelancerOdyssey/projects/1/views/1?layout=board) for more info on future developments.
