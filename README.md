@@ -14,12 +14,12 @@ This project aims to bring a more robust, maintainable, and functional UI to the
         - [ini](https://github.com/npm/ini)
         - [react-three-fiber](https://github.com/pmndrs/react-three-fiber)
 
-- ### <u>Desktop Wrapper:</u> [tauri](https://tauri.studio)
+- ### Desktop Wrapper: [tauri](https://tauri.studio)
 
 ## Running Locally
 
 To run in your browser:
-- `npm start`.
+- `npm start`
 
 To run the desktop environment:
 - Development: `npm start` then `npm run tauri dev`
