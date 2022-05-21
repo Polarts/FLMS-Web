@@ -5,21 +5,22 @@ This project aims to bring a more robust, maintainable, and functional UI to the
 
 ## Tech Stack
 
-- ### <u>Web Framework:</u> React 18.1.0
-    - <u>Languages:</u> TypeScript, SCSS
-    - <u>State Management:</u> [Mobx](https://mobx.js.org/README.html), MVVM-like
-    - <u>External Libraries:</u>
+- Languages: TypeScript, SCSS, Rust (tauri-related)
+
+- ### Web Framework: React 18.1.0
+    - State Management: [Mobx](https://mobx.js.org/README.html), MVVM-like
+    - External Libraries:
         - [rc-dock](https://ticlo.github.io/rc-dock/)
         - [react-menu](https://szhsin.github.io/react-menu/)
         - [ini](https://github.com/npm/ini)
         - [react-three-fiber](https://github.com/pmndrs/react-three-fiber)
 
-- ### <u>Desktop Wrapper:</u> [tauri](https://tauri.studio)
+- ### Desktop Wrapper: [tauri](https://tauri.studio)
 
 ## Running Locally
 
 To run in your browser:
-- `npm start`.
+- `npm start`
 
 To run the desktop environment:
 - Development: `npm start` then `npm run tauri dev`
