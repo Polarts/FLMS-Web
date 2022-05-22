@@ -73,14 +73,13 @@ function App() {
   }
 
   return (
-    <div style={{display: 'flex', flexDirection: 'column'}}>
+    <div className="app">
       <TopMenu/>
       <DockLayout 
         ref={dockRef} 
         onLayoutChange={layoutChanged} 
         defaultLayout={defaultLayout} 
         groups={groups}
-        style={{height: 'calc(100vh - 30px)'}}
       />
     </div>
   );
