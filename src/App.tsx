@@ -72,13 +72,17 @@ function App() {
   }
 
   return (
-    <DockLayout 
-      ref={dockRef} 
-      onLayoutChange={layoutChanged} 
-      defaultLayout={defaultLayout} 
-      groups={groups}
-      style={{position: 'absolute', inset: 10}}
-    />
+    <div className="app">
+      <div className="top-bar">
+
+      </div>
+      <DockLayout 
+        ref={dockRef} 
+        onLayoutChange={layoutChanged} 
+        defaultLayout={defaultLayout} 
+        groups={groups}
+      />
+    </div>
   );
 }
 

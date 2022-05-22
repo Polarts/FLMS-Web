@@ -1,0 +1,8 @@
+/* App Layout */
+
+.app {
+    display: flex; flex-direction: column;
+
+    .top-bar { height: 30px }
+    .dock-layout { height: calc(100vh - 30px) }
+}
