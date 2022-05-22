@@ -3,6 +3,7 @@ import { useEffect, useRef } from 'react';
 import ThreeView from './components/three/ThreeView';
 import FileEntityList from './components/ui/FileEntityList';
 import PropertyEditor from './components/ui/PropertyEditor';
+import TopMenu from './components/ui/TopMenu';
 
 const groups: {[key:string]: TabGroup} = {
   common: {
@@ -72,13 +73,16 @@ function App() {
   }
 
   return (
-    <DockLayout 
-      ref={dockRef} 
-      onLayoutChange={layoutChanged} 
-      defaultLayout={defaultLayout} 
-      groups={groups}
-      style={{position: 'absolute', inset: 10}}
-    />
+    <div style={{display: 'flex', flexDirection: 'column'}}>
+      <TopMenu/>
+      <DockLayout 
+        ref={dockRef} 
+        onLayoutChange={layoutChanged} 
+        defaultLayout={defaultLayout} 
+        groups={groups}
+        style={{height: 'calc(100vh - 30px)'}}
+      />
+    </div>
   );
 }
 
