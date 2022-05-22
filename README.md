@@ -9,6 +9,7 @@ This project aims to bring a more robust, maintainable, and functional UI to the
     - <u>Languages:</u> TypeScript, SCSS
     - <u>State Management:</u> [Mobx](https://mobx.js.org/README.html), MVVM-like
     - <u>External Libraries:</u>
+        - [The New CSS Reset](https://elad2412.github.io/the-new-css-reset/)
         - [rc-dock](https://ticlo.github.io/rc-dock/)
         - [react-menu](https://szhsin.github.io/react-menu/)
         - [ini](https://github.com/npm/ini)
