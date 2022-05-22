@@ -10,6 +10,7 @@ This project aims to bring a more robust, maintainable, and functional UI to the
 - ### Web Framework: React 18.1.0
     - State Management: [Mobx](https://mobx.js.org/README.html), MVVM-like
     - External Libraries:
+        - [The New CSS Reset](https://elad2412.github.io/the-new-css-reset/)
         - [rc-dock](https://ticlo.github.io/rc-dock/)
         - [react-menu](https://szhsin.github.io/react-menu/)
         - [ini](https://github.com/npm/ini)
