@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import "the-new-css-reset/css/reset.css"
 import './index.scss';
 import "rc-dock/dist/rc-dock.css";
 import '@szhsin/react-menu/dist/index.css';
