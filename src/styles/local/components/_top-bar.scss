@@ -1,0 +1,14 @@
+/* Top Bar Component */
+
+.top-bar {
+    display: flex;
+
+    .menu-button {
+        padding: 0 1rem;
+        &.open, &:hover { background-color: whitesmoke; }
+    }
+
+    .szh-menu__item {
+        span { margin-left: 0.5rem; }
+    }
+}

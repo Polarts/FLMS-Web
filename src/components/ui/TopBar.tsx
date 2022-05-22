@@ -1,8 +1,8 @@
 import FileMenu from "./menus/FileMenu";
 
-export default function TopMenu() {
+export default function TopBar() {
     return (
-        <div style={{display: 'flex', height: 30}}>
+        <div className="top-bar">
             <FileMenu/>
         </div>
     )

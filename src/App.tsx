@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react';
 import ThreeView from './components/three/ThreeView';
 import FileEntityList from './components/ui/FileEntityList';
 import PropertyEditor from './components/ui/PropertyEditor';
-import TopMenu from './components/ui/TopMenu';
+import TopBar from './components/ui/TopBar';
 
 const groups: {[key:string]: TabGroup} = {
   common: {
@@ -74,7 +74,7 @@ function App() {
 
   return (
     <div className="app">
-      <TopMenu/>
+      <TopBar/>
       <DockLayout 
         ref={dockRef} 
         onLayoutChange={layoutChanged} 
