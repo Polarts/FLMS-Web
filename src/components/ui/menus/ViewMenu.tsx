@@ -3,11 +3,11 @@ import { mdiTrayArrowDown, mdiTrayArrowUp } from '@mdi/js';
 import IconMenuItem from "./IconMenuItem";
 import { useContext, useRef } from "react";
 import { LayoutBase } from "rc-dock";
-import { AppContext } from "../../../data/context/AppContext";
+import { LayoutContext } from "../../../data/context/LayoutContext";
 
 export default function ViewMenu() {
 
-    const { layout, setLayout } = useContext(AppContext);
+    const { layout, setLayout } = useContext(LayoutContext);
 
     const aRef = useRef<HTMLAnchorElement>(null);
     const filePickerRef = useRef<HTMLInputElement>(null);

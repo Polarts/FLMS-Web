@@ -1,16 +1,16 @@
 import { LayoutBase } from "rc-dock";
-import React, { createContext, FC, ReactNode, useEffect, useState } from "react";
+import  { createContext, FC, ReactNode, useEffect, useState } from "react";
 
-export interface AppContextState {
+export interface LayoutContextState {
     layout?: LayoutBase,
     setLayout: (l: LayoutBase) => void
 }
 
-export const AppContext = createContext<AppContextState>({
+export const LayoutContext = createContext<LayoutContextState>({
     setLayout: () => {}
 });
 
-const AppProvider: FC<{children: ReactNode}> = ({ children }) => {
+const LayoutProvider: FC<{children: ReactNode}> = ({ children }) => {
     
     const [layout, setLayout] = useState<LayoutBase|undefined>();
 
@@ -31,13 +31,13 @@ const AppProvider: FC<{children: ReactNode}> = ({ children }) => {
     }, [layout]);
 
     return (
-        <AppContext.Provider value={{
+        <LayoutContext.Provider value={{
             layout,
             setLayout
         }}>
             {children}
-        </AppContext.Provider>
+        </LayoutContext.Provider>
     );
 }
 
-export default AppProvider;
+export default LayoutProvider;

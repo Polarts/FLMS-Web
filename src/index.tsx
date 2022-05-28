@@ -7,16 +7,16 @@ import '@szhsin/react-menu/dist/index.css';
 import '@szhsin/react-menu/dist/transitions/slide.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import AppProvider from './data/context/AppContext';
+import LayoutProvider from './data/context/LayoutContext';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <AppProvider>
+    <LayoutProvider>
       <App />
-    </AppProvider>
+    </LayoutProvider>
   </React.StrictMode>
 );
 

@@ -4,7 +4,7 @@ import ThreeView from './components/three/ThreeView';
 import FileEntityList from './components/ui/FileEntityList';
 import PropertyEditor from './components/ui/PropertyEditor';
 import TopBar from './components/ui/TopBar';
-import { AppContext } from './data/context/AppContext';
+import { LayoutContext } from './data/context/LayoutContext';
 
 const groups: {[key:string]: TabGroup} = {
   common: {
@@ -60,7 +60,7 @@ const defaultLayout: LayoutData = {
 
 function App() {
 
-  const { layout, setLayout } = useContext(AppContext);
+  const { layout, setLayout } = useContext(LayoutContext);
 
   const dockRef = useRef<DockLayout>(null);
 
