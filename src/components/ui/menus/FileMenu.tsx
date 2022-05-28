@@ -20,13 +20,26 @@ export default function FileMenu() {
                 fr.readAsArrayBuffer(fileList[0]);
                 fr.onload = (e) => {
                     const buffer = e.target?.result as ArrayBuffer;
+                    console.log(buffer);
                     const bytes = new Uint8Array(buffer);
                     const jdv = new jDataView(bytes);
+                    const fileTag = jdv.getString(4);
+                    console.log('file tag:', fileTag, 'position:', jdv.tell());
+                    const version = jdv.getInt8();
+                    console.log('version:', version, 'position:', jdv.tell());
                     const stringBlockOffset = jdv.getInt32();
-                    console.log(stringBlockOffset);
-                    jdv.skip(stringBlockOffset);
-                    const strBlock = jdv.getString(buffer.byteLength, stringBlockOffset);
-                    console.log(strBlock);
+                    console.log(
+                        'string block offset:', stringBlockOffset, 
+                        'length:', bytes.byteLength, 
+                        'position:', jdv.tell()
+                    );
+                    //jdv.seek(stringBlockOffset);
+                    //const strBlock = jdv.getString(bytes.byteLength - stringBlockOffset, stringBlockOffset);
+                    //console.log(strBlock);
+                    const entryNameOffset = jdv.getInt16();
+                    console.log('entry name offset:', entryNameOffset, 'position:', jdv.tell());
+                    const sectionEntriesCount = jdv.getInt16();
+                    console.log('section entries count:', sectionEntriesCount, 'position:', jdv.tell());
                     
                 }
             }
