@@ -1,6 +1,6 @@
 import { Menu, MenuDivider, MenuItem, SubMenu } from "@szhsin/react-menu";
 import Icon from '@mdi/react';
-import { mdiFolderSearchOutline } from '@mdi/js';
+import { mdiFolderSearchOutline, mdiExitToApp } from '@mdi/js';
 import { mdiFileDocumentPlusOutline } from '../../../communityIcons';
 import { useState } from "react";
 
@@ -9,17 +9,13 @@ const tempRecentFiles = ["sample.ini", "system.ini", "universe.ini"];
 
 export default function FileMenu() {
 
-    const [isOpen, setOpen] = useState(false);
-
     return (
         <Menu 
             menuButton={
-                <button className={`menu-button${isOpen? " open" : ""}`}
-                        onClick={() => setOpen(prev => !prev)}>
+                <button className={`menu-button`}>
                     File
                 </button>
             }
-            onItemClick={() => setOpen(false)}
         >
             <SubMenu label="New">
                 {tempFileTypes.map(type => (
@@ -45,6 +41,19 @@ export default function FileMenu() {
                     <MenuItem key={file+"-menu-item"}>{file}</MenuItem>
                 ))}
             </SubMenu>
+            <MenuItem>Close</MenuItem>
+            <MenuDivider/>
+            <MenuItem>Save</MenuItem>
+            <MenuItem>Save As</MenuItem>
+            <MenuItem>Save All</MenuItem>
+            <MenuDivider/>
+            <MenuItem>
+                <Icon
+                    path={mdiExitToApp}
+                    size={0.8}
+                />
+                <span>Exit</span>
+            </MenuItem>
         </Menu>
     )
 }
