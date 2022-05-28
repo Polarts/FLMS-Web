@@ -1,7 +1,7 @@
 # Freelancer Mod Studio - Web
 
 A re-implementation of [Freelancer Mod Studio](https://github.com/FreelancerOdyssey/FreelancerModStudio) using modern Web technologies.
-This project aims to bring a more robust, maintainable, and functional UI to the Freelancer modding experience. The main target is a cross-platform Desktop app, but we also have a side goal to deploy a browser version so that you won't have to download anything.
+This project aims to bring a more robust, maintainable, and functional UI to the Freelancer modding experience. The main target is a cross-platform Desktop app, but deploying a browser-based would be nice as well.
 
 ## Tech Stack
 
@@ -29,6 +29,6 @@ To run the desktop environment:
 
 ## Contributing Code
 
-We have plenty of issues in the [Issues page](https://github.com/FreelancerOdyssey/FLMS-Web/issues). If you'd like to be assigned, comment on an issue and request an assignment.
+There's plenty of issues in the [Issues page](https://github.com/FreelancerOdyssey/FLMS-Web/issues). If you'd like to be assigned, comment on an issue and request an assignment.
 
-We use GitHub Projects to keep up with the workflow. Take a look at the [Projects page](https://github.com/orgs/FreelancerOdyssey/projects/1/views/1?layout=board) for more info on future developments.
+Take a look at the [Project page](https://github.com/Polarts/FLMS-Web/projects/1) for more info on future developments.
