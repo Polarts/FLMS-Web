@@ -1,8 +1,8 @@
 import { Menu, MenuDivider, MenuItem, SubMenu } from "@szhsin/react-menu";
 import Icon from '@mdi/react';
-import { mdiFolderSearchOutline, mdiExitToApp } from '@mdi/js';
+import { mdiFolderSearchOutline, mdiExitToApp, mdiFileExcelOutline, mdiContentSaveOutline, mdiContentSaveMoveOutline, mdiContentSaveAllOutline } from '@mdi/js';
 import { mdiFileDocumentPlusOutline } from '../../../communityIcons';
-import { useState } from "react";
+import IconMenuItem from "./IconMenuItem";
 
 const tempFileTypes = ["INI File"];
 const tempRecentFiles = ["sample.ini", "system.ini", "universe.ini"];
@@ -19,41 +19,45 @@ export default function FileMenu() {
         >
             <SubMenu label="New">
                 {tempFileTypes.map(type => (
-                    <MenuItem key={type+"-menu-item"}>
-                        <Icon 
-                            path={mdiFileDocumentPlusOutline}
-                            size={0.8}
-                        />
-                        <span>{type}</span>
-                    </MenuItem>
+                    <IconMenuItem 
+                        key={type+"-menu-item"}
+                        icon={mdiFileDocumentPlusOutline}
+                        label={type}
+                    />
                 ))}
             </SubMenu>
             <SubMenu label="Open">
-                <MenuItem>
-                    <Icon 
-                        path={mdiFolderSearchOutline}
-                        size={0.8}
-                    />
-                    <span>Browse...</span>
-                </MenuItem>
+                <IconMenuItem
+                    icon={mdiFolderSearchOutline}
+                    label="Browse..."
+                />
                 <MenuDivider/>
                 {tempRecentFiles.map(file => (
                     <MenuItem key={file+"-menu-item"}>{file}</MenuItem>
                 ))}
             </SubMenu>
-            <MenuItem>Close</MenuItem>
+            <IconMenuItem
+                icon={mdiFileExcelOutline}
+                label="Close file"
+            />
             <MenuDivider/>
-            <MenuItem>Save</MenuItem>
-            <MenuItem>Save As</MenuItem>
-            <MenuItem>Save All</MenuItem>
+            <IconMenuItem
+                icon={mdiContentSaveOutline}
+                label="Save"
+            />
+            <IconMenuItem
+                icon={mdiContentSaveMoveOutline}
+                label="Save as"
+            />
+            <IconMenuItem
+                icon={mdiContentSaveAllOutline}
+                label="Save all"
+            />
             <MenuDivider/>
-            <MenuItem>
-                <Icon
-                    path={mdiExitToApp}
-                    size={0.8}
-                />
-                <span>Exit</span>
-            </MenuItem>
+            <IconMenuItem
+                icon={mdiExitToApp}
+                label="Exit app"
+            />
         </Menu>
     )
 }
