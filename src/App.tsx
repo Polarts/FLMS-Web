@@ -1,9 +1,10 @@
 import { DockLayout, LayoutBase, LayoutData, TabGroup } from 'rc-dock';
-import { useEffect, useRef } from 'react';
+import { useContext, useEffect, useRef } from 'react';
 import ThreeView from './components/three/ThreeView';
 import FileEntityList from './components/ui/FileEntityList';
 import PropertyEditor from './components/ui/PropertyEditor';
 import TopBar from './components/ui/TopBar';
+import { AppContext } from './data/context/AppContext';
 
 const groups: {[key:string]: TabGroup} = {
   common: {
@@ -59,17 +60,18 @@ const defaultLayout: LayoutData = {
 
 function App() {
 
+  const { layout, setLayout } = useContext(AppContext);
+
   const dockRef = useRef<DockLayout>(null);
 
   useEffect(() => {
-    const savedLayoutJSON = localStorage.getItem("layout");
-    if (!!savedLayoutJSON) {
-      dockRef.current?.loadLayout(JSON.parse(savedLayoutJSON));
+    if (!!layout) {
+      dockRef.current!.loadLayout(layout);
     }
-  }, [dockRef]);
+  }, [dockRef, layout]);
 
   function layoutChanged(newLayout: LayoutBase) {
-    localStorage.setItem("layout", JSON.stringify(newLayout));
+    setLayout(newLayout);
   }
 
   return (
