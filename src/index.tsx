@@ -8,15 +8,18 @@ import '@szhsin/react-menu/dist/transitions/slide.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import LayoutProvider from './data/context/LayoutContext';
+import FileProvider from './data/context/FileContext';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <LayoutProvider>
-      <App />
-    </LayoutProvider>
+    <FileProvider>
+      <LayoutProvider>
+        <App />
+      </LayoutProvider>
+    </FileProvider>
   </React.StrictMode>
 );
 

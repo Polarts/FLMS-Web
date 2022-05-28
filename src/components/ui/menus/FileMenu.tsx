@@ -9,6 +9,10 @@ const tempRecentFiles = ["sample.ini", "system.ini", "universe.ini"];
 
 export default function FileMenu() {
 
+    function browse() {
+        
+    }
+
     return (
         <Menu 
             menuButton={
@@ -30,6 +34,7 @@ export default function FileMenu() {
                 <IconMenuItem
                     icon={mdiFolderSearchOutline}
                     label="Browse..."
+                    onClick={browse}
                 />
                 <MenuDivider/>
                 {tempRecentFiles.map(file => (
