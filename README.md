@@ -1,6 +1,6 @@
 # Freelancer Mod Studio - Web
 
-A re-implementation of [Freelancer Mod Studio](https://github.com/FreelancerOdyssey/FreelancerModStudio) using modern Web technologies.
+A re-implementation of [Freelancer Mod Studio](https://github.com/AftermathFreelancer/FLModStudio) using modern Web technologies.
 This project aims to bring a more robust, maintainable, and functional UI to the Freelancer modding experience. The main target is a cross-platform Desktop app, but deploying a browser-based would be nice as well.
 
 ## Tech Stack
