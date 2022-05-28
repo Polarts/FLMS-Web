@@ -1,5 +1,5 @@
 import { Menu, MenuItem, SubMenu } from "@szhsin/react-menu";
-import { mdiDownload, mdiUpload } from '@mdi/js';
+import { mdiDownloadOutline, mdiUploadOutline } from '@mdi/js';
 import Icon from "@mdi/react";
 
 export default function ViewMenu() {
@@ -15,14 +15,14 @@ export default function ViewMenu() {
             <SubMenu label="Layout">
                 <MenuItem>
                     <Icon 
-                        path={mdiDownload}
+                        path={mdiDownloadOutline}
                         size={0.8}
                     />
                     <span>Save to file</span>
                 </MenuItem>
                 <MenuItem>
                     <Icon
-                        path={mdiUpload}
+                        path={mdiUploadOutline}
                         size={0.8}
                     />
                     <span>Load from file</span>
