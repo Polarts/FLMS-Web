@@ -4,7 +4,7 @@ import { mdiFileDocumentPlusOutline } from '../../../communityIcons';
 import IconMenuItem from "./IconMenuItem";
 import { useContext } from "react";
 import { FileContext } from "../../../data/context/FileContext";
-import jDataView from "jdataview";
+import BiniDataView from "../../../data/types/BiniDataView";
 
 const tempFileTypes = ["INI File"];
 const tempRecentFiles = ["sample.ini", "system.ini", "universe.ini"];
@@ -22,24 +22,10 @@ export default function FileMenu() {
                     const buffer = e.target?.result as ArrayBuffer;
                     console.log(buffer);
                     const bytes = new Uint8Array(buffer);
-                    const jdv = new jDataView(bytes);
-                    const fileTag = jdv.getString(4);
-                    console.log('file tag:', fileTag, 'position:', jdv.tell());
-                    const version = jdv.getInt8();
-                    console.log('version:', version, 'position:', jdv.tell());
-                    const stringBlockOffset = jdv.getInt32();
-                    console.log(
-                        'string block offset:', stringBlockOffset, 
-                        'length:', bytes.byteLength, 
-                        'position:', jdv.tell()
-                    );
-                    //jdv.seek(stringBlockOffset);
-                    //const strBlock = jdv.getString(bytes.byteLength - stringBlockOffset, stringBlockOffset);
-                    //console.log(strBlock);
-                    const entryNameOffset = jdv.getInt16();
-                    console.log('entry name offset:', entryNameOffset, 'position:', jdv.tell());
-                    const sectionEntriesCount = jdv.getInt16();
-                    console.log('section entries count:', sectionEntriesCount, 'position:', jdv.tell());
+                    console.log(bytes.join(', '));
+                    const bini = new BiniDataView(bytes);
+                    const result = bini.readBiniFile(bytes.byteLength);
+                    console.log(result);
                     
                 }
             }
