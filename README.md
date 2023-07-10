@@ -1,11 +1,11 @@
 # Freelancer Mod Studio - Web
 
-A re-implementation of [Freelancer Mod Studio](https://github.com/FreelancerOdyssey/FreelancerModStudio) using modern Web technologies.
+A re-implementation of [Freelancer Mod Studio](https://github.com/Lazrius/FLModStudio) using modern Web technologies.
 This project aims to bring a more robust, maintainable, and functional UI to the Freelancer modding experience. The main target is a cross-platform Desktop app, but we also have a side goal to deploy a browser version so that you won't have to download anything.
 
 ## Tech Stack
 
-- ### <u>Web Framework:</u> React 18.1.0
+- ### <u>Web Framework:</u> React 18.2.0
     - <u>Languages:</u> TypeScript, SCSS
     - <u>State Management:</u> [Mobx](https://mobx.js.org/README.html), MVVM-like
     - <u>External Libraries:</u>
