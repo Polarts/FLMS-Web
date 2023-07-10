@@ -1,10 +1,10 @@
+import { mdiContentSaveAllOutline, mdiContentSaveMoveOutline, mdiContentSaveOutline, mdiExitToApp, mdiFileExcelOutline, mdiFolderSearchOutline } from '@mdi/js';
 import { Menu, MenuDivider, MenuItem, SubMenu } from "@szhsin/react-menu";
-import { mdiFolderSearchOutline, mdiExitToApp, mdiFileExcelOutline, mdiContentSaveOutline, mdiContentSaveMoveOutline, mdiContentSaveAllOutline } from '@mdi/js';
-import { mdiFileDocumentPlusOutline } from '../../../communityIcons';
-import IconMenuItem from "./IconMenuItem";
 import { useContext } from "react";
+import { mdiFileDocumentPlusOutline } from '../../../communityIcons';
 import { FileContext } from "../../../data/context/FileContext";
 import BiniDataView from "../../../data/types/BiniDataView";
+import IconMenuItem from "./IconMenuItem";
 
 const tempFileTypes = ["INI File"];
 const tempRecentFiles = ["sample.ini", "system.ini", "universe.ini"];
