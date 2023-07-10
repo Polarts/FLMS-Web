@@ -1,6 +1,5 @@
+import { mdiContentSaveAllOutline, mdiContentSaveMoveOutline, mdiContentSaveOutline, mdiExitToApp, mdiFileExcelOutline, mdiFolderSearchOutline } from '@mdi/js';
 import { Menu, MenuDivider, MenuItem, SubMenu } from "@szhsin/react-menu";
-import Icon from '@mdi/react';
-import { mdiFolderSearchOutline, mdiExitToApp, mdiFileExcelOutline, mdiContentSaveOutline, mdiContentSaveMoveOutline, mdiContentSaveAllOutline } from '@mdi/js';
 import { mdiFileDocumentPlusOutline } from '../../../communityIcons';
 import IconMenuItem from "./IconMenuItem";
 
