@@ -3,7 +3,7 @@ import { Menu, MenuDivider, MenuItem, SubMenu } from "@szhsin/react-menu";
 import { useContext } from "react";
 import { mdiFileDocumentPlusOutline } from '../../../communityIcons';
 import { FileContext } from "../../../data/context/FileContext";
-import BiniDataView from "../../../data/types/BiniDataView";
+import BiniDataView from "../../../data/ini/BiniDataView";
 import IconMenuItem from "./IconMenuItem";
 
 const tempFileTypes = ["INI File"];
