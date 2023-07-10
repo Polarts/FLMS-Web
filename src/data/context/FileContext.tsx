@@ -1,4 +1,4 @@
-import { createContext, FC, ReactNode, useEffect, useRef, useState } from "react";
+import { createContext, FC, ReactNode, useRef } from "react";
 
 type FilePickedCallback = (files: FileList | null) => Promise<void>;
 
@@ -54,7 +54,7 @@ const FileProvider: FC<{children: ReactNode}> = ({ children }) => {
             saveFile,
             pickFile
         }}>
-            <a ref={aRef} className="u-hidden"/>
+            <a ref={aRef} className="u-hidden" href="#"/>
             <input 
                 ref={filePickerRef} 
                 className="u-hidden"
