@@ -1,0 +1,52 @@
+$primary-color: #108ee9;
+
+@function get-border($px: 2px) {
+    @return $px solid $primary-color;
+}
+
+.data-grid {
+    margin: 0 1.5%;
+    width: 97%;
+
+    thead { user-select: none; }
+
+    tbody {
+        border: get-border();
+        border-bottom: none;
+    }
+
+    td { padding: 5px; }
+
+    th {
+        padding: 7px 5px 3px 5px;
+        border-bottom: get-border();
+        &:not(:first-of-type) {
+            text-indent: 5%;
+        }
+    }
+
+    tr:focus-within .key-cell {
+        font-weight: bold;
+    }
+
+    .key-cell {
+        width: 35%;
+        &-content {
+            color: $primary-color;
+            max-width: 200px; min-width: 30px; height: 25px;
+            text-overflow: ellipsis; white-space: nowrap;
+            display: block; overflow: hidden;
+        }
+    }
+
+    .value-cell {
+        input {
+            border-left: get-border(1px);
+            border-bottom: get-border(1px);
+            padding: 2px; width: 98%;
+            &:focus {
+                background-color: rgba($primary-color, .1);
+            }
+        }
+    }
+}
