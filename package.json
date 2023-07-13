@@ -1,21 +1,11 @@
 {
   "name": "flms-web",
   "version": "0.1.0",
-  "private": true,
   "dependencies": {
     "@mdi/js": "^7.2.96",
     "@mdi/react": "^1.6.1",
     "@react-three/fiber": "^8.13.4",
     "@szhsin/react-menu": "^4.0.1",
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^14.0.0",
-    "@testing-library/user-event": "^14.4.3",
-    "@types/jdataview": "^0.0.31",
-    "@types/jest": "^29.5.2",
-    "@types/node": "^20.4.1",
-    "@types/react": "^18.2.14",
-    "@types/react-dom": "^18.2.6",
-    "@types/three": "^0.153.0",
     "ini": "^4.1.1",
     "jdataview": "^2.5.0",
     "rc-dock": "^3.2.18",
@@ -25,7 +15,7 @@
     "sass": "^1.63.6",
     "the-new-css-reset": "^1.9.0",
     "three": "^0.154.0",
-    "typescript": "^5.1.6",
+    "typescript": "^4.9.5",
     "web-vitals": "^3.3.2"
   },
   "scripts": {
@@ -54,6 +44,16 @@
     ]
   },
   "devDependencies": {
-    "@tauri-apps/cli": "^1.4.0"
+    "@tauri-apps/cli": "^1.4.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@testing-library/user-event": "^14.4.3",
+    "@types/jdataview": "^0.0.31",
+    "@types/jest": "^29.5.2",
+    "@types/node": "^20.4.1",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "@types/three": "^0.153.0",
+    "jest": "^27.5.1"
   }
 }
