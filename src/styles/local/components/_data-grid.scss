@@ -10,20 +10,7 @@ $primary-color: #108ee9;
 
     thead { user-select: none; }
 
-    tbody {
-        border: get-border();
-        border-bottom: none;
-    }
-
     td { padding: 5px; }
-
-    th {
-        padding: 7px 5px 3px 5px;
-        border-bottom: get-border();
-        &:not(:first-of-type) {
-            text-indent: 5%;
-        }
-    }
 
     tr:focus-within .key-cell {
         font-weight: bold;
@@ -41,8 +28,7 @@ $primary-color: #108ee9;
 
     .value-cell {
         input {
-            border-left: get-border(1px);
-            border-bottom: get-border(1px);
+            border-bottom: 1px solid rgba($primary-color, .3);
             padding: 2px; width: 98%;
             &:focus {
                 background-color: rgba($primary-color, .1);

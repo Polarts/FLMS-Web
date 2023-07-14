@@ -11,7 +11,7 @@
     .dock-layout { 
         height: calc(100vh - 30px - (var(--margin) * 2));
         #properties-view {
-            overflow-y: scroll;
+            overflow-y: auto;
         }
     }
 }
