@@ -8,5 +8,10 @@
     overflow: hidden;
 
     .top-bar { height: 30px }
-    .dock-layout { height: calc(100vh - 30px - (var(--margin) * 2)) }
+    .dock-layout { 
+        height: calc(100vh - 30px - (var(--margin) * 2));
+        #properties-view {
+            overflow-y: auto;
+        }
+    }
 }
