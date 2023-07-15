@@ -1,9 +1,5 @@
 $primary-color: #108ee9;
 
-@function get-border($px: 2px) {
-    @return $px solid $primary-color;
-}
-
 .data-grid {
     margin: 0 1.5%;
     width: 97%;
@@ -12,8 +8,8 @@ $primary-color: #108ee9;
 
     td { padding: 5px; }
 
-    tr:focus-within .key-cell {
-        font-weight: bold;
+    tr:focus-within {
+        background-color: rgba($primary-color, .1);
     }
 
     .key-cell {
@@ -30,9 +26,6 @@ $primary-color: #108ee9;
         input {
             border-bottom: 1px solid rgba($primary-color, .3);
             padding: 2px; width: 98%;
-            &:focus {
-                background-color: rgba($primary-color, .1);
-            }
         }
     }
 }
