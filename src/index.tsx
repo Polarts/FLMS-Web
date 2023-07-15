@@ -1,25 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import "the-new-css-reset/css/reset.css"
-import './index.scss';
-import "rc-dock/dist/rc-dock.css";
 import '@szhsin/react-menu/dist/index.css';
 import '@szhsin/react-menu/dist/transitions/slide.css';
+import "rc-dock/dist/rc-dock.css";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import "the-new-css-reset/css/reset.css";
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import FilePickerProvider from './data/context/FilePickerContext';
 import LayoutProvider from './data/context/LayoutContext';
-import FileProvider from './data/context/FileContext';
+import './index.scss';
+import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <FileProvider>
+    <FilePickerProvider>
       <LayoutProvider>
         <App />
       </LayoutProvider>
-    </FileProvider>
+    </FilePickerProvider>
   </React.StrictMode>
 );
 

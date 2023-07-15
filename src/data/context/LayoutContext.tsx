@@ -1,5 +1,5 @@
 import { LayoutBase } from "rc-dock";
-import  { createContext, FC, ReactNode, useEffect, useState } from "react";
+import { createContext, FC, ReactNode, useEffect, useState } from "react";
 
 export interface LayoutContextState {
     layout?: LayoutBase,
@@ -7,12 +7,12 @@ export interface LayoutContextState {
 }
 
 export const LayoutContext = createContext<LayoutContextState>({
-    setLayout: () => {}
+    setLayout: () => { }
 });
 
-const LayoutProvider: FC<{children: ReactNode}> = ({ children }) => {
-    
-    const [layout, setLayout] = useState<LayoutBase|undefined>();
+const LayoutProvider: FC<{ children: ReactNode }> = ({ children }) => {
+
+    const [layout, setLayout] = useState<LayoutBase | undefined>();
 
     // init
     useEffect(() => {

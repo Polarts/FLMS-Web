@@ -2,7 +2,7 @@ import { mdiContentSaveAllOutline, mdiContentSaveMoveOutline, mdiContentSaveOutl
 import { Menu, MenuDivider, MenuItem, SubMenu } from "@szhsin/react-menu";
 import { useContext } from "react";
 import { mdiFileDocumentPlusOutline } from '../../../communityIcons';
-import { FileContext } from "../../../data/context/FileContext";
+import { FilePickerContext } from "../../../data/context/FilePickerContext";
 import BiniDataView from "../../../data/ini/BiniDataView";
 import IconMenuItem from "./IconMenuItem";
 
@@ -11,7 +11,7 @@ const tempRecentFiles = ["sample.ini", "system.ini", "universe.ini"];
 
 export default function FileMenu() {
 
-    const { pickFile, saveFile } = useContext(FileContext);
+    const { pickFile, saveFile } = useContext(FilePickerContext);
 
     function browse() {
         pickFile(async (fileList) => {

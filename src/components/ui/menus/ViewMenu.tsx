@@ -4,11 +4,11 @@ import IconMenuItem from "./IconMenuItem";
 import { useContext, useRef } from "react";
 import { LayoutBase } from "rc-dock";
 import { LayoutContext } from "../../../data/context/LayoutContext";
-import { FileContext } from "../../../data/context/FileContext";
+import { FilePickerContext } from "../../../data/context/FilePickerContext";
 
 export default function ViewMenu() {
 
-    const { pickFile, saveFile } = useContext(FileContext);
+    const { pickFile, saveFile } = useContext(FilePickerContext);
     const { layout, setLayout } = useContext(LayoutContext);
     
     function menuItemClick(item: string) {
