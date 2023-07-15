@@ -1,0 +1,31 @@
+$primary-color: #108ee9;
+
+.data-grid {
+    margin: 0 1.5%;
+    width: 97%;
+
+    thead { user-select: none; }
+
+    td { padding: 5px; }
+
+    tr:focus-within {
+        background-color: rgba($primary-color, .1);
+    }
+
+    .key-cell {
+        width: 35%;
+        &-content {
+            color: $primary-color;
+            max-width: 200px; min-width: 30px; height: 25px;
+            text-overflow: ellipsis; white-space: nowrap;
+            display: block; overflow: hidden;
+        }
+    }
+
+    .value-cell {
+        input {
+            border-bottom: 1px solid rgba($primary-color, .3);
+            padding: 2px; width: 98%;
+        }
+    }
+}
