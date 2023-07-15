@@ -65,8 +65,8 @@ function App() {
   const dockRef = useRef<DockLayout>(null);
 
   useEffect(() => {
-    if (!!layout) {
-      dockRef.current!.loadLayout(layout);
+    if (layout && dockRef.current) {
+      dockRef.current.loadLayout(layout);
     }
   }, [dockRef, layout]);
 
