@@ -34,10 +34,10 @@ export default class IniFileStore {
     }
 
     constructor() {
+        this.setKeyValue = this.setKeyValue.bind(this);
         this.readFile = this.readFile.bind(this);
         this.handleTextFileLoad = this.handleTextFileLoad.bind(this);
         this.handleBinaryFileLoad = this.handleBinaryFileLoad.bind(this);
-        this.setKeyValue = this.setKeyValue.bind(this);
 
         makeObservable(this, {
             iniObjects: observable,

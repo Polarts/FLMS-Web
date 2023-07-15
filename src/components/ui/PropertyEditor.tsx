@@ -7,11 +7,15 @@ function PropertyEditor() {
 
     const iniFileStore = useContext(IniFileStoreContext);
 
-    // Hack to make the observer refresh
-    Object.values(iniFileStore.selectedEntry)
-
     return (
-        <DataGrid data={iniFileStore.selectedEntry as any} onValueChange={iniFileStore.setKeyValue}/>
+        <>
+            {
+                // Object.values makes sure the observer refreshes on every property
+                Object.values(iniFileStore.selectedEntry).length > 0
+                ? <DataGrid data={iniFileStore.selectedEntry as any} onValueChange={iniFileStore.setKeyValue}/>
+                : <div className="u-parent-centered u-center-text">Select a section from the file to edit</div>
+            }
+        </>
     )
 }
 
