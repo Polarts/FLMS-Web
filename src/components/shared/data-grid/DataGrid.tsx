@@ -10,7 +10,7 @@ export default function DataGrid({ data, onValueChange }: DataGridProps) {
     return (
         <table className="data-grid">
             <tbody>
-                {Object.entries(data).map(([key, value]) => (
+                {data && Object.entries(data).map(([key, value]) => (
                     <tr key={key}>
                         <td className="key-cell">
                             <div className="key-cell-content" title={key}>

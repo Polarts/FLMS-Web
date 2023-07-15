@@ -1,6 +1,7 @@
 import jDataView from "jdataview";
+import { Dict } from "../../utils/types";
 
-export type INIStruct = { [section: string]: { [property: string]: string } };
+export type INIStruct = { [section: string]: Dict<String> };
 
 /**
  * Extension of jDataView that reads BINI files.

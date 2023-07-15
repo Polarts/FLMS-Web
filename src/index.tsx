@@ -5,6 +5,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import "the-new-css-reset/css/reset.css";
 import App from './App';
+import IniFileStoreContext from './data/context/IniFileStoreContext';
 import FilePickerProvider from './data/context/FilePickerContext';
 import LayoutProvider from './data/context/LayoutContext';
 import './index.scss';
@@ -17,7 +18,9 @@ root.render(
   <React.StrictMode>
     <FilePickerProvider>
       <LayoutProvider>
-        <App />
+        <IniFileStoreContext>
+          <App />
+        </IniFileStoreContext>
       </LayoutProvider>
     </FilePickerProvider>
   </React.StrictMode>

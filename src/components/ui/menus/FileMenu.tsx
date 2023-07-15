@@ -2,8 +2,8 @@ import { mdiContentSaveAllOutline, mdiContentSaveMoveOutline, mdiContentSaveOutl
 import { Menu, MenuDivider, MenuItem, SubMenu } from "@szhsin/react-menu";
 import { useContext } from "react";
 import { mdiFileDocumentPlusOutline } from '../../../communityIcons';
+import { IniFileStoreContext } from '../../../data/context/IniFileStoreContext';
 import { FilePickerContext } from "../../../data/context/FilePickerContext";
-import BiniDataView from "../../../data/ini/BiniDataView";
 import IconMenuItem from "./IconMenuItem";
 
 const tempFileTypes = ["INI File"];
@@ -13,21 +13,12 @@ export default function FileMenu() {
 
     const { pickFile, saveFile } = useContext(FilePickerContext);
 
+    const iniFileStore = useContext(IniFileStoreContext);
+
     function browse() {
         pickFile(async (fileList) => {
             if (!!fileList && fileList.length === 1) {
-                const fr = new FileReader();
-                fr.readAsArrayBuffer(fileList[0]);
-                fr.onload = (e) => {
-                    const buffer = e.target?.result as ArrayBuffer;
-                    console.log(buffer);
-                    const bytes = new Uint8Array(buffer);
-                    console.log(bytes.join(', '));
-                    const bini = new BiniDataView(bytes);
-                    const result = bini.readBiniFile(bytes.byteLength);
-                    console.log(result);
-                    
-                }
+                iniFileStore.readFile(fileList[0]);
             }
         }, ".ini");
     }
