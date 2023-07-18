@@ -1,7 +1,7 @@
 import { DockLayout, LayoutBase, LayoutData, TabGroup } from 'rc-dock';
 import { useContext, useEffect, useRef } from 'react';
 import ThreeView from './components/three/ThreeView';
-import FileEntityList from './components/ui/FileEntityList';
+import EntityList from './components/ui/entity-list/EntityList';
 import PropertyEditor from './components/ui/PropertyEditor';
 import TopBar from './components/ui/TopBar';
 import { LayoutContext } from './data/context/LayoutContext';
@@ -39,7 +39,7 @@ const defaultLayout: LayoutData = {
             id: "file-view",
             title: "file.ini",
             group: 'files',
-            content: <FileEntityList/>
+            content: <EntityList/>
           }
         ]
       },
