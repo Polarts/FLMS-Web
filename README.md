@@ -12,7 +12,7 @@ This project aims to bring a more robust, maintainable, and functional UI to the
         - [The New CSS Reset](https://elad2412.github.io/the-new-css-reset/)
         - [rc-dock](https://ticlo.github.io/rc-dock/)
         - [react-menu](https://szhsin.github.io/react-menu/)
-        - [ini](https://github.com/npm/ini)
+        - [js-ini](https://www.npmjs.com/package/js-ini)
         - [react-three-fiber](https://github.com/pmndrs/react-three-fiber)
 
 - ### Desktop Wrapper: [tauri](https://tauri.studio)
