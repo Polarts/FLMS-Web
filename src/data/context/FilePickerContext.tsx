@@ -2,17 +2,17 @@ import { createContext, FC, ReactNode, useRef } from "react";
 
 type FilePickedCallback = (files: FileList | null) => Promise<void>;
 
-export interface FileContextState {
+export interface FilePickerContextState {
     saveFile: (blob: Blob, fileName: string) => void;
     pickFile: (callback: FilePickedCallback, accepts?: string, multiple?: boolean) => void;
 }
 
-export const FileContext = createContext<FileContextState>({
+export const FilePickerContext = createContext<FilePickerContextState>({
     saveFile: () => {},
     pickFile: () => {},
 });
 
-const FileProvider: FC<{children: ReactNode}> = ({ children }) => {
+const FilePickerProvider: FC<{children: ReactNode}> = ({ children }) => {
     
     const aRef = useRef<HTMLAnchorElement>(null);
     const filePickerRef = useRef<HTMLInputElement>(null);
@@ -50,7 +50,7 @@ const FileProvider: FC<{children: ReactNode}> = ({ children }) => {
     }
 
     return (
-        <FileContext.Provider value={{
+        <FilePickerContext.Provider value={{
             saveFile,
             pickFile
         }}>
@@ -62,8 +62,8 @@ const FileProvider: FC<{children: ReactNode}> = ({ children }) => {
                 onChange={filePicked}
             />
             {children}
-        </FileContext.Provider>
+        </FilePickerContext.Provider>
     );
 }
 
-export default FileProvider;
+export default FilePickerProvider;

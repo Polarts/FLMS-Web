@@ -1,31 +1,22 @@
-import { useState } from "react";
-import { Dict } from "../../utils/types";
+import { observer } from "mobx-react-lite";
+import { useContext } from "react";
+import { IniFileStoreContext } from "../../data/context/IniFileStoreContext";
 import DataGrid from "../shared/data-grid/DataGrid";
 
-export default function PropertyEditor() {
+function PropertyEditor() {
 
-    const [data, setData] = useState<Dict<string>>({
-        // TEST DATA:
-        hello: "world",
-        goodbye: "universe",
-        "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi aut nihil placeat explicabo ad velit?": "yes",
-        ok: "ok",
-        ok2: "ok",
-        ok3: "ok",
-        ok4: "ok",
-        ok5: "ok",
-        ok6: "ok",
-        ok7: "ok",
-    });
-
-    function handleValueChange(key: string, value: string) {
-        setData((prev) => ({
-            ...prev,
-            [key]: value
-        }))
-    }
+    const iniFileStore = useContext(IniFileStoreContext);
 
     return (
-        <DataGrid data={data} onValueChange={handleValueChange}/>
+        <>
+            {
+                // Object.values makes sure the observer refreshes on every property
+                Object.values(iniFileStore.selectedEntry).length > 0
+                ? <DataGrid data={iniFileStore.selectedEntry as any} onValueChange={iniFileStore.setKeyValue}/>
+                : <div className="u-parent-centered u-center-text">Select a section from the file to edit</div>
+            }
+        </>
     )
 }
+
+export default observer(PropertyEditor);
