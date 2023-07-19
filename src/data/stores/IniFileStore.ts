@@ -2,6 +2,7 @@ import { IIniObject, IIniObjectSection, IniValue } from "js-ini";
 import { makeObservable, makeAutoObservable, observable, action, computed, runInAction } from "mobx";
 import BiniDataView from "../ini/BiniDataView";
 import { parseFromString } from "../ini/IniParser";
+import { IniSectionEntityBase } from "../ini/models/IniSectionEntityBase";
 
 const fr = new FileReader();
 
@@ -14,6 +15,8 @@ export default class IniFileStore {
     private file?: Blob;
 
     public iniObjects: IIniObject[] = [];
+
+    public iniEntities: IniSectionEntityBase[] = [];
 
     public selectedEntryIndex = 0;
     public setSelectedEntryIndex(value: number) {
@@ -41,6 +44,7 @@ export default class IniFileStore {
 
         makeObservable(this, {
             iniObjects: observable,
+            iniEntities: observable,
             selectedEntryIndex: observable,
             setSelectedEntryIndex: action,
             selectedEntry: computed,
@@ -67,6 +71,7 @@ export default class IniFileStore {
             const parsed = parseFromString(str);
             runInAction(() => {
                 this.iniObjects = parsed.map(iniObjectToObservable);
+                this.iniEntities = parsed.map(IniSectionEntityBase.fromIniObject);
             })
         }
     }
