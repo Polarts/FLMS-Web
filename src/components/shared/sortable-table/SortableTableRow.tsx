@@ -15,7 +15,7 @@ export default function SortableTableRow<T>({ colDefs, onSelect, selectedIndex, 
     return (
         <tr onClick={() => onSelect(row, index)} style={{background: selectedIndex === index? "lightblue" : "transparent"}}>
             {Object.entries(colDefs).map(([colKey, colDef]) => (
-                <td>
+                <td key={index+colKey}>
                     {colDef.cellRenderer
                     ? colDef.cellRenderer(rowDict[colKey])
                     : rowDict[colKey]}

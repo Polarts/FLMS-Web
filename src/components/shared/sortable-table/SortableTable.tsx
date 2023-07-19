@@ -56,14 +56,16 @@ export default function SortableTable<T>({ colDefs, rows, defaultSortKey, onSele
     return (
         <table>
             <thead>
-                {Object.keys(colDefs).map(colKey => (
-                    <th onClick={() => handleSortChange(colKey)}>
-                        {colDefs[colKey].title} {sortState.key === colKey && getSortArrow(sortState.isDescending)}
-                    </th>
-                ))}
+                <tr>
+                    {Object.keys(colDefs).map(colKey => (
+                        <th key={colKey} onClick={() => handleSortChange(colKey)}>
+                            {colDefs[colKey].title} {sortState.key === colKey && getSortArrow(sortState.isDescending)}
+                        </th>
+                    ))}
+                </tr>
             </thead>
             <tbody>
-                {sortedRows.map((row, i) => <SortableTableRow colDefs={colDefs} index={i} row={row} onSelect={handleRowSelect} selectedIndex={selectedIndex} />)}
+                {sortedRows.map((row, i) => <SortableTableRow key={i} colDefs={colDefs} index={i} row={row} onSelect={handleRowSelect} selectedIndex={selectedIndex} />)}
             </tbody>
         </table>
     )
