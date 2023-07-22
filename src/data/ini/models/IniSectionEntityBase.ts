@@ -24,6 +24,8 @@ export class IniSectionEntityBase {
         public index: number,
     ) {
         this.setKeyValue = this.setKeyValue.bind(this);
+        // NOTE: Limitation of Mobx doesn't allow for dynamic properties.
+        // Need to fifure out how to properly process the entities.
         makeAutoObservable(this, {
             setDynamicProperties: action,
             setKeyValue: action,
