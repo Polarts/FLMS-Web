@@ -10,9 +10,8 @@ function PropertyEditor() {
     return (
         <>
             {
-                // Object.values makes sure the observer refreshes on every property
-                Object.values(iniFileStore.selectedEntry).length > 0
-                ? <DataGrid data={iniFileStore.selectedEntry as any} onValueChange={iniFileStore.setKeyValue}/>
+                iniFileStore.selectedEntity
+                ? <DataGrid data={iniFileStore.selectedEntity.objectForEditor} onValueChange={iniFileStore.selectedEntity.setKeyValue}/>
                 : <div className="u-parent-centered u-center-text">Select a section from the file to edit</div>
             }
         </>

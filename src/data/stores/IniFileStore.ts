@@ -6,49 +6,26 @@ import { IniSectionEntityBase } from "../ini/models/IniSectionEntityBase";
 
 const fr = new FileReader();
 
-function iniObjectToObservable(iniObj: IIniObject) {
-    return makeAutoObservable(iniObj);
-}
-
 export default class IniFileStore {
 
     private file?: Blob;
 
-    public iniObjects: IIniObject[] = [];
-
     public iniEntities: IniSectionEntityBase[] = [];
 
-    public selectedEntryIndex = 0;
-    public setSelectedEntryIndex(value: number) {
-        this.selectedEntryIndex = value;
-    }
-
-    public get selectedEntry(): IIniObjectSection {
-        const selectedObject = this.iniObjects?.at(this.selectedEntryIndex);
-        if (selectedObject) {
-            const section = Object.values(selectedObject)[0] as IIniObjectSection;
-            return section;
-        }
-        return {};
-    }
-
-    public setKeyValue(key: string, value: IniValue) {
-        this.selectedEntry[key] = value;
+    public selectedEntity?: IniSectionEntityBase;
+    public setSelectedEntity(entity?: IniSectionEntityBase) {
+        this.selectedEntity = entity;
     }
 
     constructor() {
-        this.setKeyValue = this.setKeyValue.bind(this);
         this.readFile = this.readFile.bind(this);
         this.handleTextFileLoad = this.handleTextFileLoad.bind(this);
         this.handleBinaryFileLoad = this.handleBinaryFileLoad.bind(this);
 
         makeObservable(this, {
-            iniObjects: observable,
             iniEntities: observable,
-            selectedEntryIndex: observable,
-            setSelectedEntryIndex: action,
-            selectedEntry: computed,
-            setKeyValue: action
+            selectedEntity: observable,
+            setSelectedEntity: action,
         });
     }
 
@@ -70,7 +47,6 @@ export default class IniFileStore {
         } else {
             const parsed = parseFromString(str);
             runInAction(() => {
-                this.iniObjects = parsed.map(iniObjectToObservable);
                 this.iniEntities = parsed.map(IniSectionEntityBase.fromIniObject);
             })
         }

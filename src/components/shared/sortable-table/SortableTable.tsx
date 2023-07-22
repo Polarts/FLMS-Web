@@ -27,7 +27,7 @@ export default function SortableTable<T>({ colDefs, rows, defaultSortKey, onSele
 
     const sortedRows = useMemo(() => {
         if (!sortState.key) return rows;
-        let sortedRows = rows.sort(colDefs[sortState.key].compareFn);
+        let sortedRows = rows.slice().sort(colDefs[sortState.key].compareFn);
         sortedRows = sortState.isDescending ? sortedRows.reverse() : sortedRows;
         return sortedRows;
     }, [colDefs, rows, sortState]);
