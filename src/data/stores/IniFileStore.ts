@@ -1,5 +1,5 @@
 import { IIniObject, IIniObjectSection, IniValue } from "js-ini";
-import { makeObservable, makeAutoObservable, observable, action, computed, runInAction } from "mobx";
+import { action, computed, makeAutoObservable, makeObservable, observable, runInAction } from "mobx";
 import BiniDataView from "../ini/BiniDataView";
 import { parseFromString } from "../ini/IniParser";
 
@@ -50,7 +50,7 @@ export default class IniFileStore {
 
     public readFile(file: Blob) {
         this.file = file;
-        // Default is trst to check if it was bini in first place.
+        // Default is text to check if it was bini in first place.
         fr.onload = this.handleTextFileLoad;
         fr.readAsText(file);
     }
@@ -60,7 +60,7 @@ export default class IniFileStore {
         const str = result as string;
         const isBini = str.startsWith("BINI"); // Bini files always start with the magic word "BINI"
         if (isBini) {
-            // No way around it, need to 
+            // No way around it, need to reload the file
             fr.onload = this.handleBinaryFileLoad;
             fr.readAsArrayBuffer(this.file!);
         } else {

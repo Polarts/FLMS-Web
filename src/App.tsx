@@ -1,4 +1,4 @@
-import { DockLayout, LayoutBase, LayoutData, TabGroup } from 'rc-dock';
+import { DockLayout, LayoutData, TabGroup } from 'rc-dock';
 import { useContext, useEffect, useRef } from 'react';
 import ThreeView from './components/three/ThreeView';
 import FileEntityList from './components/ui/FileEntityList';
@@ -70,16 +70,12 @@ function App() {
     }
   }, [dockRef, layout]);
 
-  function layoutChanged(newLayout: LayoutBase) {
-    setLayout(newLayout);
-  }
-
   return (
     <div className="app">
       <TopBar/>
       <DockLayout 
         ref={dockRef} 
-        onLayoutChange={layoutChanged} 
+        onLayoutChange={setLayout} 
         defaultLayout={defaultLayout} 
         groups={groups}
       />
