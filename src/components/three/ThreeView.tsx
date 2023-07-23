@@ -1,17 +1,31 @@
 import { Canvas, useFrame } from "@react-three/fiber";
-import { useRef, useState } from "react";
+import { makeAutoObservable } from "mobx";
+import { observer } from "mobx-react-lite";
+import { useMemo, useRef, useState } from "react";
 import { Vector3, Mesh } from "three";
 
 type BoxProps = {
     position: Vector3
 }
 
-function Box(props: BoxProps) {
+class ThreeStore {
+  hovered = false;
+  hover = (val: boolean) => this.hovered = val;
+  clicked = false;
+  click = (val: boolean) => this.clicked = val;
+
+  constructor() {
+    makeAutoObservable(this);
+  }
+
+  static create = () => new ThreeStore();
+}
+
+
+function BoxComp(props: BoxProps) {
     // This reference gives us direct access to the THREE.Mesh object
     const ref = useRef<Mesh>(null)
-    // Hold state for hovered and clicked events
-    const [hovered, hover] = useState(false)
-    const [clicked, click] = useState(false)
+    const {hover, click, hovered, clicked} = useMemo(ThreeStore.create, [])
     // Subscribe this component to the render-loop, rotate the mesh every frame
     useFrame((state, delta) => (ref.current!.rotation.x += 0.01))
     // Return the view, these are regular Threejs elements expressed in JSX
@@ -28,6 +42,8 @@ function Box(props: BoxProps) {
       </mesh>
     )
   }
+
+const Box = observer(BoxComp)
 
 export default function ThreeView() {
     return (
