@@ -1,8 +1,9 @@
-import { IIniObject, IIniObjectSection, IniValue } from "js-ini";
+import { IIniObject, IniValue } from "js-ini";
 import { action, computed, makeAutoObservable, makeObservable, observable, runInAction } from "mobx";
 import { Dict } from "../../utils/types";
 import BiniDataView from "../ini/BiniDataView";
 import { parseFromString } from "../ini/IniParser";
+import { IniComment } from "../ini/types";
 
 const fr = new FileReader();
 
@@ -13,6 +14,8 @@ function iniObjectToObservable(iniObj: IIniObject) {
 export default class IniFileStore {
 
     private file?: Blob;
+    private lines: string[] = [];
+    private comments: IniComment[] = [];
 
     public iniObjects: IIniObject[] = [];
 
@@ -62,6 +65,17 @@ export default class IniFileStore {
             fr.onload = this.handleBinaryFileLoad;
             fr.readAsArrayBuffer(this.file!);
         } else {
+            this.lines = str.split("\n");
+            this.lines.forEach((line, index) => {
+                const position = line.indexOf(";");
+                if (position !== -1) {
+                    this.comments.push({
+                        content: line,
+                        lineNum: index,
+                        position
+                    })
+                }
+            })
             const parsed = parseFromString(str);
             runInAction(() => {
                 this.iniObjects = parsed.map(iniObjectToObservable);

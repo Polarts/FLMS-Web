@@ -1,12 +1,14 @@
-import { parse, IIniObject, IniValue } from "js-ini";
+import { IIniObject, parse } from "js-ini";
+import { SECTION_REG } from "../../utils/regex";
 import { Dict } from "../../utils/types";
 
 
 export function parseFromString(iniText: string) {
     const iniObjects: IIniObject[] = [];
-    iniText.split(/(^\[)/gm).forEach(section => {
-        if (section && section !== "[") {
-            const parsed = parse("["+section);
+    const sectionTextMatches = [...iniText.matchAll(SECTION_REG)].map(s => s[0]);
+    sectionTextMatches.forEach(section => {
+        if (section) {
+            const parsed = parse(section);
             iniObjects.push(parsed);
         }
     })
