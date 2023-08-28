@@ -1,5 +1,6 @@
 import { IIniObject, IIniObjectSection, IniValue } from "js-ini";
 import { action, computed, makeAutoObservable, makeObservable, observable, runInAction } from "mobx";
+import { Dict } from "../../utils/types";
 import BiniDataView from "../ini/BiniDataView";
 import { parseFromString } from "../ini/IniParser";
 
@@ -15,22 +16,19 @@ export default class IniFileStore {
 
     public iniObjects: IIniObject[] = [];
 
-    public selectedEntryIndex = 0;
-    public setSelectedEntryIndex(value: number) {
-        this.selectedEntryIndex = value;
+    public selectedIniObjIdx = 0;
+    public setSelectedIniObjIdx(value: number) {
+        this.selectedIniObjIdx = value;
     }
 
-    public get selectedEntry(): IIniObjectSection {
-        const selectedObject = this.iniObjects?.at(this.selectedEntryIndex);
-        if (selectedObject) {
-            const section = Object.values(selectedObject)[0] as IIniObjectSection;
-            return section;
-        }
-        return {};
+    public get selectedIniObj(): IIniObject {
+        return this.iniObjects.at(this.selectedIniObjIdx) ?? {};
     }
 
     public setKeyValue(key: string, value: IniValue) {
-        this.selectedEntry[key] = value;
+        const obj = Object.values(this.selectedIniObj)[0] as Dict<IniValue>;
+        obj[key] = value;
+        console.log(obj);
     }
 
     constructor() {
@@ -41,9 +39,9 @@ export default class IniFileStore {
 
         makeObservable(this, {
             iniObjects: observable,
-            selectedEntryIndex: observable,
-            setSelectedEntryIndex: action,
-            selectedEntry: computed,
+            selectedIniObjIdx: observable,
+            setSelectedIniObjIdx: action,
+            selectedIniObj: computed,
             setKeyValue: action
         });
     }

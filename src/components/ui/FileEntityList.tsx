@@ -11,7 +11,7 @@ function FileEntityList() {
             {
                 iniFileStore.iniObjects.map((obj, i) => {
                     const entries = Object.entries(obj);
-                    return <div onClick={() => iniFileStore.setSelectedEntryIndex(i)} style={{color: iniFileStore.selectedEntryIndex === i? 'red' : 'black'}}>{`${entries[0][0]}`}</div>
+                    return <div onClick={() => iniFileStore.setSelectedIniObjIdx(i)} style={{color: iniFileStore.selectedIniObjIdx === i? 'red' : 'black'}}>{`${entries[0][0]}`}</div>
                 })
             }
         </>

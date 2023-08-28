@@ -1,0 +1,1818 @@
+{
+	"ObjectTable": {
+		"room": "file_path.cmp",
+		"prop": "file_path.3db",
+		"cart": "file_path.3db"
+	},
+	"Texture": {
+		"file": "file_path.txm",
+		"name": "string",
+		"tex_shape": "string",
+		"texture_name": "string",
+		"shape_name": "string",
+		"dim": "float"
+	},
+	"Shape": {
+		"name": "string",
+		"x": "string",
+		"y": "string",
+		"w": "int",
+		"h": "int"
+	},
+	"Cursor": {
+		"nickname": "string",
+		"anim": "string, int, string",
+		"hotspot": "int",
+		"blend": "int",
+		"color": "int",
+		"scale": "float",
+		"spin": "int"
+	},
+	"IGraph": {
+		"nickname": "string",
+		"type": "string",
+		"point": "int"
+	},
+	"Constants": {
+		"COLLISION_DAMAGE_FACTOR": "int",
+		"MUSIC_CROSS_FADE_DELAY": "int",
+		"MUZZLE_CONE_ANGLE": "int",
+		"PLAYER_COLLISION_GROUP_HIT_PTS_SCALE": "int",
+		"PLAYER_ATTACHED_EQUIP_HIT_PTS_SCALE": "int",
+		"MAX_PLAYER_AMMO": "int"
+	},
+	"EngineEquipConsts": {
+		"CRUISE_DISRUPT_TIME": "int",
+		"MAX_DELTA_FX_THROTTLE": "float",
+		"THROTTLE_STEADY_TIME": "float",
+		"THROTTLE_ATTEN_MOD_RANGE": "int",
+		"DELTA_THROTTLE_ATTEN_MOD_CHANGING": "int",
+		"DELTA_THROTTLE_ATTEN_MOD_STEADY": "int",
+		"CRUISE_STEADY_TIME": "int",
+		"DELTA_CRUISE_ATTEN_MOD_STEADY": "int",
+		"CRUISE_ATTEN_MOD_RANGE": "int",
+		"CRUISING_SPEED": "int"
+	},
+	"ShieldEquipConsts": {
+		"HULL_DAMAGE_FACTOR": "float"
+	},
+	"PhySysConsts": {
+		"MATERIAL_FRICTION": "float",
+		"MATERIAL_ELASTICITY": "float",
+		"DEFAULT_LINEAR_DAMPING": "float",
+		"DEFAULT_ANGULAR_DAMPING": "float",
+		"ANOM_LIMITS_MAX_VELOCITY": "int",
+		"MIN_TIME_BETWEEN_COLLISIONS": "float"
+	},
+	"CommConsts": {
+		"COMM_PLAYER_FAR_DIST": "int",
+		"COMM_PLAYER_FAR_DIST_ATTEN": "string",
+		"CHATTER_MAX_DIST": "int",
+		"CHATTER_MAX_DIST_ATTEN": "int",
+		"CHATTER_START_ATTEN": "int",
+		"COMM_CONFLICT_PRIORITY_CUTOFF": "int",
+		"WALLA_MAX_DIST": "int",
+		"WALLA_MAX_DIST_ATTEN": "int",
+		"WALLA_START_ATTEN": "int",
+		"WALLA_PRIORITY_CUTOFF": "int"
+	},
+	"ConcaveObject": {
+		"filename": "file_path.3db",
+		"part": "string"
+	},
+	"WinCamera": {
+		"fovx": "int"
+	},
+	"CockpitCamera": {
+		"fovx": "int",
+		"znear": "int"
+	},
+	"ThirdPersonCamera": {
+		"fovx": "int"
+	},
+	"DeathCamera": {
+		"fovx": "int"
+	},
+	"Time": {
+		"seconds_per_day": "int"
+	},
+	"system": {
+		"nickname": "string",
+		"pos": "int",
+		"msg_id_prefix": "string",
+		"visit": "int",
+		"strid_name": "int",
+		"ids_info": "int",
+		"file": "file_path.ini",
+		"NavMapScale": "int"
+	},
+	"Base": {
+		"nickname": "string",
+		"system": "string",
+		"strid_name": "string",
+		"file": "file_path.ini",
+		"BGCS_base_run_by": "string",
+		"terrain_tiny": "string",
+		"terrain_sml": "string",
+		"terrain_mdm": "string",
+		"terrain_lrg": "string",
+		"terrain_dyna_01": "string",
+		"terrain_dyna_02": "string",
+		"autosave_forbidden": "string"
+	},
+	";Settings": {
+		"caps": "string",
+		"codepage": "string, string"
+	},
+	"Houses": {
+		"format": "string, string",
+		"house": "string",
+		"systems": "string, string"
+	},
+	"systems": {
+		"format": "string, string, string",
+		"systems": "string",
+		"house": "string"
+	},
+	"SystemConnections": {
+		"Path": "string, string, string"
+	},
+	"const": {
+		"prettymap": "string, int"
+	},
+	"4x2": {
+		"null": "float",
+		"mapping": "string, float, float, float, int, int, int"
+	},
+	"sector": {
+		"mapping": "string",
+		"system": "string, int, int"
+	},
+	"MissionCreatedSolar": {
+		"base": "string",
+		"pos": "int",
+		"ids_info": "int"
+	},
+	"BaseInfo": {
+		"nickname": "string",
+		"start_room": "string"
+	},
+	"Room": {
+		"nickname": "string",
+		"file": "file_path.ini"
+	},
+	"SystemInfo": {
+		"space_color": "string, string, string",
+		"local_faction": "string",
+		"rpop_solar_detection": "string",
+		"space_farclip": "int"
+	},
+	"EncounterParameters": {
+		"nickname": "string",
+		"filename": "file_path.ini"
+	},
+	"TexturePanels": {
+		"file": "file_path.ini"
+	},
+	"Asteroids": {
+		"file": "file_path.ini",
+		"zone": "string"
+	},
+	"Nebula": {
+		"file": "file_path.ini",
+		"zone": "string"
+	},
+	"Music": {
+		"space": "string",
+		"danger": "string",
+		"battle": "string"
+	},
+	"Dust": {
+		"spacedust": "string"
+	},
+	"Ambient": {
+		"color": "int"
+	},
+	"Background": {
+		"basic_stars": "file_path.cmp",
+		"complex_stars": "file_path.cmp",
+		"nebulae": "file_path.cmp"
+	},
+	"zone": {
+		"nickname": "string",
+		"ids_name": "int",
+		"pos": "int",
+		"rotate": "string, int, string",
+		"shape": "string",
+		"size": "int",
+		"property_flags": "int",
+		"visit": "int",
+		"ids_info": "int",
+		"sort": "int",
+		"Music": "string",
+		"toughness": "int",
+		"density": "int",
+		"repop_time": "int",
+		"max_battle_size": "int",
+		"pop_type": "string",
+		"relief_time": "int",
+		"path_label": "string, int",
+		"usage": "string",
+		"mission_eligible": "string",
+		"encounter": "string, int, float",
+		"faction": "string, int",
+		"property_fog_color": "int",
+		"edge_fraction": "float",
+		"damage": "int",
+		"density_restriction": "int",
+		"spacedust": "string",
+		"spacedust_maxparticles": "int",
+		"interference": "float",
+		"comment": "string",
+		"population_additive": "string",
+		"mission_type": "string",
+		"vignette_type": "string",
+		"spin": "int",
+		"lane_id": "string",
+		"drag_modifier": "int",
+		"tradelane_down": "int",
+		"attack_ids": "string, string",
+		"tradelane_attack": "int",
+		"music": "string"
+	},
+	"LightSource": {
+		"nickname": "string",
+		"pos": "int",
+		"color": "int",
+		"range": "int",
+		"type": "string",
+		"atten_curve": "string",
+		"attenuation": "int",
+		"color_curve": "string, int",
+		"rotate": "string, int, string",
+		"direction": "float"
+	},
+	"Object": {
+		"nickname": "string",
+		"ids_name": "int",
+		"pos": "string, int, string",
+		"archetype": "string",
+		"star": "string",
+		"atmosphere_range": "int",
+		"ids_info": "int",
+		"burn_color": "int",
+		"visit": "int",
+		"loadout": "string",
+		"rotate": "int",
+		"spin": "string, float, string",
+		"msg_id_prefix": "string",
+		"jump_effect": "string",
+		"goto": "string, string, string",
+		"reputation": "string",
+		"behavior": "string",
+		"pilot": "string",
+		"base": "string",
+		"dock_with": "string",
+		"voice": "string",
+		"space_costume": "string, string",
+		"difficulty_level": "int",
+		"parent": "string",
+		"ambient_color": "int",
+		"ring": "file_path.ini",
+		"next_ring": "string",
+		"prev_ring": "string",
+		"faction": "string",
+		"tradelane_space_name": "int",
+		"Ambient": "int"
+	},
+	"Room_Info": {
+		"set_script": "file_path.thn",
+		"scene": "file_path.thn",
+		"animation": "string",
+		"goodscart_script": "file_path.thn",
+		"animation_oneshot": "string"
+	},
+	"Spiels": {
+		"ShipDealer": "string",
+		"EquipmentDealer": "string",
+		"CommodityDealer": "string"
+	},
+	"Camera": {
+		"name": "string"
+	},
+	"Room_Sound": {
+		"ambient": "string",
+		"music": "string"
+	},
+	"CharacterPlacement": {
+		"name": "string",
+		"start_script": "file_path.thn"
+	},
+	"ForSaleShipPlacement": {
+		"name": "string"
+	},
+	"Hotspot": {
+		"name": "string",
+		"behavior": "string",
+		"room_switch": "string",
+		"set_virtual_room": "string",
+		"state_read": "int",
+		"state_send": "int",
+		"virtual_room": "string"
+	},
+	"PlayerShipPlacement": {
+		"name": "string",
+		"landing_script": "file_path.thn",
+		"launching_script": "file_path.thn"
+	},
+	"FlashlightSet": {
+		"icolor": "int",
+		"scale": "int",
+		"gap": "string",
+		"blink": "float",
+		"endpause": "int",
+		"hardpoint": "string",
+		"numlights": "int"
+	},
+	"Archetype": {
+		"solar": "string"
+	},
+	"FlashlightLine": {
+		"icolor": "int",
+		"scale": "int",
+		"gap": "float",
+		"blink": "float",
+		"endpause": "int",
+		"numlights": "int",
+		"hardpoint": "string"
+	},
+	"star": {
+		"nickname": "string",
+		"star_glow": "string",
+		"star_center": "string",
+		"lens_flare": "string",
+		"lens_glow": "string",
+		"spines": "string",
+		"intensity_fade_in": "string",
+		"intensity_fade_out": "string",
+		"zone_occlusion_fade_in": "int",
+		"zone_occlusion_fade_out": "int",
+		"radius": "int"
+	},
+	"star_glow": {
+		"nickname": "string",
+		"shape": "string",
+		"scale": "int",
+		"inner_color": "int",
+		"outer_color": "int"
+	},
+	"spines": {
+		"nickname": "string",
+		"radius_scale": "int",
+		"shape": "string",
+		"min_radius": "int",
+		"max_radius": "int",
+		"spine": "int"
+	},
+	"lens_flare": {
+		"nickname": "string",
+		"shape": "string",
+		"min_radius": "int",
+		"max_radius": "int",
+		"bead": "string, string, string, string, string, string"
+	},
+	"lens_glow": {
+		"nickname": "string",
+		"shape": "string",
+		"radius_scale": "int",
+		"inner_color": "int",
+		"outer_color": "int",
+		"glow_fade_in_seconds": "float",
+		"glow_fade_out_seconds": "float"
+	},
+	"Solar": {
+		"nickname": "string",
+		"ids_name": "int",
+		"ids_info": "int",
+		"type": "string",
+		"DA_archetype": "file_path.cmp",
+		"material_library": "file_path.mat",
+		"envmap_material": "string",
+		"LODranges": "string, int, int, int, int, int, int, int",
+		"mass": "int",
+		"loadout": "string",
+		"open_sound": "string",
+		"close_sound": "string",
+		"docking_sphere": "string, string, int",
+		"solar_radius": "int",
+		"shape_name": "string",
+		"hit_pts": "int",
+		"docking_camera": "string",
+		"open_anim": "string",
+		"jump_out_hp": "string",
+		"explosion_arch": "string",
+		"destructible": "string",
+		"phantom_physics": "string",
+		"fuse": "string, int, int",
+		"shield_link": "string, string, string",
+		"surface_hit_effects": "string, string",
+		"animated_textures": "string",
+		"distance_render": "int",
+		"nomad": "string"
+	},
+	"CollisionGroup": {
+		"obj": "string",
+		"separable": "string",
+		"parent_impulse": "string",
+		"child_impulse": "string",
+		"debris_type": "string",
+		"mass": "string",
+		"fuse": "string, string, int",
+		"hit_pts": "int",
+		"group_dmg_hp": "string",
+		"group_dmg_obj": "string",
+		"root_health_proxy": "string",
+		"dmg_hp": "string",
+		"dmg_obj": "string"
+	},
+	"Asteroid": {
+		"nickname": "string",
+		"DA_archetype": "file_path.3db",
+		"material_library": "file_path.mat",
+		"phantom_physics": "string",
+		"explosion_arch": "string",
+		"recharge_time": "int",
+		"explosion_impulse": "int",
+		"detect_radius": "int",
+		"explosion_offset": "int",
+		"envmap_material": "string"
+	},
+	"AsteroidMine": {
+		"nickname": "string",
+		"DA_archetype": "file_path.3db",
+		"material_library": "file_path.mat",
+		"explosion_arch": "string",
+		"detect_radius": "int",
+		"explosion_offset": "int",
+		"recharge_time": "int",
+		"explosion_impulse": "int",
+		"phantom_physics": "string",
+		"envmap_material": "string"
+	},
+	"DynamicAsteroid": {
+		"nickname": "string",
+		"DA_archetype": "file_path.3db",
+		"material_library": "file_path.mat",
+		"explosion_arch": "string",
+		"particle_effect": "string"
+	},
+	"Exterior": {
+		"shape": "string",
+		"color": "int",
+		"opacity": "float",
+		"thickness_edge": "int",
+		"outer_edge": "float",
+		"inner_edge": "float",
+		"num_segments": "int",
+		"fade_range": "int",
+		"detail_shape": "string",
+		"detail_tile": "int",
+		"transition_dist": "int",
+		"shape_weights": "int",
+		"fill_shape": "string",
+		"plane_slices": "int",
+		"bit_radius": "int",
+		"bit_radius_random_variation": "float",
+		"min_bits": "int",
+		"max_bits": "int",
+		"move_bit_percent": "float",
+		"equator_bias": "float",
+		"ball_scale": "float",
+		"flash": "string",
+		"flash_radius": "int",
+		"flash_size": "int",
+		"spin": "float"
+	},
+	"Clouds": {
+		"max_distance": "int",
+		"puff_count": "int",
+		"puff_radius": "int",
+		"puff_colora": "int",
+		"puff_colorb": "int",
+		"puff_max_alpha": "float",
+		"puff_shape": "string",
+		"puff_weights": "int",
+		"puff_drift": "int",
+		"near_fade_distance": "int",
+		"lightning_intensity": "int",
+		"lightning_color": "int",
+		"lightning_gap": "int",
+		"lightning_duration": "float",
+		"puff_density": "float",
+		"puff_cloud_size": "int",
+		"puff_particles": "int",
+		"puff_size": "int",
+		"puff_opacity": "int"
+	},
+	"Exclusion Zones": {
+		"exclusion": "string",
+		"fog_far": "int",
+		"zone_shell": "file_path.3db",
+		"shell_scalar": "int",
+		"max_alpha": "float",
+		"exclusion_tint": "int",
+		"fog_near": "int",
+		"exclude_billboards": "int",
+		"exclude_dynamic_asteroids": "int",
+		"empty_cube_frequency": "float",
+		"exclude_Dynamic_Asteroids": "int",
+		"billboard_count": "int"
+	},
+	"NebulaLight": {
+		"ambient": "int",
+		"sun_burnthrough_intensity": "int",
+		"sun_burnthrough_scaler": "int",
+		"color": "int"
+	},
+	"Fog": {
+		"fog_enabled": "int",
+		"near": "string",
+		"distance": "int",
+		"color": "int",
+		"opacity": "string"
+	},
+	"properties": {
+		"flag": "string",
+		"exclusion": "string",
+		"fog_far": "int",
+		"zone_shell": "file_path.3db",
+		"shell_scalar": "int",
+		"max_alpha": "float",
+		"exclusion_tint": "int",
+		"exclude_billboards": "int"
+	},
+	"Properties": {
+		"flag": "string"
+	},
+	"BackgroundLightning": {
+		"duration": "int",
+		"gap": "int",
+		"color": "int"
+	},
+	"DynamicLightning": {
+		"gap": "int",
+		"duration": "int",
+		"color": "int",
+		"ambient_intensity": "int",
+		"intensity_increase": "int"
+	},
+	"Sound": {
+		"ambient": "string, string",
+		"msg": "string",
+		"duration": "int",
+		"attenuation": "int",
+		"Priority": "int",
+		"priority": "int",
+		"nickname": "string",
+		"type": "string",
+		"file": "file_path.wav",
+		"is_2d": "string",
+		"streamer": "string",
+		"crv_pitch": "int",
+		"range": "int",
+		"pitch_bendable": "string"
+	},
+	"FadeChunks": {
+		"num": "int",
+		"fade_range": "int",
+		"shape": "string",
+		"size": "int",
+		"color": "int",
+		"thickness": "int"
+	},
+	"CloseChunks": {
+		"num": "int",
+		"fade_range": "int",
+		"shape": "string",
+		"size": "int",
+		"color": "int",
+		"thickness": "int"
+	},
+	"Field": {
+		"cube_size": "int",
+		"fill_dist": "int",
+		"empty_cube_frequency": "float",
+		"diffuse_color": "int",
+		"ambient_color": "int",
+		"ambient_increase": "int",
+		"tint_field": "int",
+		"max_alpha": "float",
+		"contains_fog_zone": "int"
+	},
+	"Cube": {
+		"asteroid": "string, float, float, float, int, int, int",
+		"xaxis_rotation": "int",
+		"yaxis_rotation": "int",
+		"zaxis_rotation": "int"
+	},
+	"AsteroidBillboards": {
+		"count": "int",
+		"start_dist": "int",
+		"fade_dist_percent": "float",
+		"shape": "string",
+		"color_shift": "int",
+		"ambient_intensity": "int",
+		"size": "int"
+	},
+	"DynamicAsteroids": {
+		"asteroid": "string",
+		"count": "int",
+		"placement_radius": "int",
+		"placement_offset": "int",
+		"max_velocity": "int",
+		"max_angular_velocity": "int",
+		"color_shift": "int"
+	},
+	"LootableZone": {
+		"asteroid_loot_container": "string",
+		"asteroid_loot_commodity": "string",
+		"dynamic_loot_container": "string",
+		"dynamic_loot_commodity": "string",
+		"asteroid_loot_count": "int",
+		"dynamic_loot_count": "int",
+		"asteroid_loot_difficulty": "int",
+		"dynamic_loot_difficulty": "int",
+		"zone": "string"
+	},
+	"Band": {
+		"render_parts": "int",
+		"shape": "string",
+		"height": "int",
+		"offset_dist": "int",
+		"fade": "int",
+		"texture_aspect": "int",
+		"color_shift": "int",
+		"ambient_intensity": "int",
+		"vert_increase": "int"
+	},
+	"Exclusion zones": {
+		"exclusion": "string",
+		"exclude_billboards": "int"
+	},
+	"ExclusionBand": {
+		"zone": "string",
+		"render_parts": "int",
+		"shape": "string",
+		"height": "int",
+		"offset_dist": "int",
+		"fade": "int",
+		"texture_aspect": "int",
+		"color_shift": "float",
+		"ambient_intensity": "int",
+		"cull_mode": "string",
+		"vert_increase": "int"
+	},
+	"Ship": {
+		"nickname": "string",
+		"LODranges": "string, int",
+		"DA_archetype": "file_path.cmp",
+		"material_library": "file_path.mat",
+		"type": "string"
+	},
+	"RtcSlider": {
+		"set": "string, float",
+		"set_less": "string, float"
+	},
+	"GenericScripts": {
+		"set_segment": "string",
+		"set_gender": "string",
+		"set_posture": "string",
+		"script": "file_path.thn"
+	},
+	"GCS_Exclusions": {
+		"voice": "string",
+		"script": "file_path.thn"
+	},
+	"DataNode": {
+		"node_id": "int",
+		"child_node": "int",
+		"objective_text": "string, int, string",
+		"comm_sequence": "string, string, int, float, int, string, string",
+		"Implemented": "string",
+		"Weight": "int",
+		"Offer_group": "string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string, string",
+		"Hostile_group": "string",
+		"offer_text": "string, int",
+		"Failure_text": "int",
+		"Reward_text": "int",
+		"Allowable_zone_types": "string, string",
+		"Difficulty": "string, int"
+	},
+	"DecisionNode": {
+		"node_id": "int",
+		"nickname": "string",
+		"child_node": "int"
+	},
+	"DocumentationNode": {
+		"node_id": "int",
+		"documentation": "string",
+		"child_node": "int"
+	},
+	"critical_loot": {
+		"faction": "string",
+		"archetype": "string",
+		"name": "int",
+		"type": "string"
+	},
+	"SolarFormation": {
+		"nickname": "string",
+		"type": "string",
+		"pos": "string, string, int, string, string, int, string, string, string"
+	},
+	"Global": {
+		"BonusLootDropChance": "int"
+	},
+	"RMBonusLoot": {
+		"archetype": "string",
+		"num_to_drop": "int",
+		"faction": "string, string, string",
+		"difficulty_range": "int",
+		"weight": "int"
+	},
+	"RankAndFormationSizeToDifficulty": {
+		"NpcRank": "int"
+	},
+	"KillableSolar": {
+		"nickname": "string",
+		"solar_type": "string",
+		"string_id": "int",
+		"faction": "string, string",
+		"archetype": "string",
+		"loadout": "string",
+		"hitpoints": "int",
+		"difficulty": "int",
+		"pilot_choices": "int",
+		"only_allowed_in_zone_type": "string"
+	},
+	"Diff2Money": {
+		"Diff2Money": "int"
+	},
+	"mVoiceProp": {
+		"voice": "string",
+		"permutation_count": "string, int",
+		"Voice": "string",
+		"gender": "string",
+		"supports_roles": "string"
+	},
+	"NPC": {
+		"nickname": "string",
+		"base_appr": "string",
+		"individual_name": "int",
+		"voice": "string",
+		"affiliation": "string",
+		"npc_ship_arch": "string",
+		"space_costume": "string, string, string"
+	},
+	"RankDiffDB": {
+		"rank_diff": "string, int"
+	},
+	"PlayerToughnessScale": {
+		"ptough_graph_pt": "int"
+	},
+	"StrafeBlock": {
+		"nickname": "string",
+		"strafe_turn_throttle": "int",
+		"strafe_run_away_distance": "int",
+		"strafe_attack_throttle": "int"
+	},
+	"FormationBlock": {
+		"nickname": "string",
+		"force_attack_formation_active_time": "int",
+		"force_attack_formation_unactive_time": "int"
+	},
+	"JobBlock": {
+		"nickname": "string",
+		"wait_for_leader_target": "string",
+		"maximum_leader_target_distance": "int",
+		"flee_when_leader_flees_style": "string",
+		"scene_toughness_threshold": "string",
+		"flee_scene_threat_style": "string",
+		"flee_when_hull_damaged_percent": "string",
+		"flee_no_weapons_style": "string",
+		"loot_flee_threshold": "string",
+		"attack_subtarget_order": "string",
+		"field_targeting": "string",
+		"attack_preference": "string, int, string",
+		"loot_preference": "string",
+		"force_attack_formation": "string",
+		"allow_player_targeting": "string"
+	},
+	"GunBlock": {
+		"nickname": "string",
+		"gun_fire_interval_time": "int",
+		"gun_fire_interval_variance_percent": "string",
+		"gun_fire_burst_interval_time": "int",
+		"gun_fire_burst_interval_variance_percent": "string",
+		"gun_fire_no_burst_interval_time": "int",
+		"gun_fire_accuracy_cone_angle": "float",
+		"gun_fire_accuracy_power": "int",
+		"gun_fire_accuracy_power_npc": "float",
+		"gun_range_threshold": "int",
+		"gun_target_point_switch_time": "int",
+		"fire_style": "string",
+		"auto_turret_interval_time": "int",
+		"auto_turret_burst_interval_time": "string",
+		"auto_turret_no_burst_interval_time": "int",
+		"auto_turret_burst_interval_variance_percent": "string",
+		"gun_range_threshold_variance_percent": "string"
+	},
+	"MissileBlock": {
+		"nickname": "string",
+		"missile_launch_interval_time": "string",
+		"missile_launch_interval_variance_percent": "string",
+		"missile_launch_range": "int",
+		"missile_launch_cone_angle": "int",
+		"missile_launch_allow_out_of_range": "string"
+	},
+	"EvadeDodgeBlock": {
+		"nickname": "string",
+		"evade_dodge_style_weight": "string, int",
+		"evade_dodge_cone_angle": "int",
+		"evade_dodge_interval_time": "int",
+		"evade_dodge_time": "int",
+		"evade_dodge_distance": "int",
+		"evade_activate_range": "int",
+		"evade_dodge_roll_angle": "string",
+		"evade_dodge_waggle_axis_cone_angle": "string",
+		"evade_dodge_slide_throttle": "int",
+		"evade_dodge_turn_throttle": "int",
+		"evade_dodge_corkscrew_turn_throttle": "float",
+		"evade_dodge_corkscrew_roll_throttle": "float",
+		"evade_dodge_corkscrew_roll_flip_direction": "string",
+		"evade_dodge_interval_time_variance_percent": "float",
+		"evade_dodge_cone_angle_variance_percent": "float",
+		"evade_dodge_direction_weight": "string, float"
+	},
+	"Pilot": {
+		"nickname": "string",
+		"evade_dodge_id": "string",
+		"evade_break_id": "string",
+		"buzz_head_toward_id": "string",
+		"buzz_pass_by_id": "string",
+		"trail_id": "string",
+		"strafe_id": "string",
+		"engine_kill_id": "string",
+		"repair_id": "string",
+		"gun_id": "string",
+		"mine_id": "string",
+		"missile_id": "string",
+		"damage_reaction_id": "string",
+		"missile_reaction_id": "string",
+		"countermeasure_id": "string",
+		"formation_id": "string",
+		"job_id": "string",
+		"inherit": "string",
+		"body": "string",
+		"comm": "string",
+		"voice": "string",
+		"body.anim": "string",
+		"thumb": "file_path.3db",
+		"comm.anim": "string, string"
+	},
+	"mShipProps": {
+		"archetype_id": "string",
+		"prop": "string"
+	},
+	"mLootProps": {
+		"nickname": "string",
+		"drop_properties": "int"
+	},
+	"PhantomLoot": {
+		"nickname": "string",
+		"toughness_range": "int",
+		"percent_chance": "int",
+		"num_to_drop": "int"
+	},
+	"RepChangeEffects": {
+		"group": "string",
+		"event": "string, string",
+		"empathy_rate": "string, float"
+	},
+	"Trigger": {
+		"nickname": "string",
+		"InitState": "string",
+		"Cnd_True": "string",
+		"system": "string",
+		"Act_ForceLand": "string",
+		"Cnd_BaseEnter": "string",
+		"Cnd_SpaceExit": "string",
+		"Act_SetShipAndLoadout": "string, string",
+		"Act_AdjAcct": "int",
+		"Act_LockDock": "string, string, string",
+		"Act_SetRep": "string, string, float",
+		"Act_GCSClamp": "string",
+		"Act_ChangeState": "string",
+		"Cnd_EncLaunched": "string",
+		"Act_SetVibeLblToShip": "string, string, string",
+		"Act_ActTrig": "string",
+		"Act_RevertCam": "string",
+		"Cnd_Destroyed": "string, int, string",
+		"Act_SetVibeLbl": "string, string, string",
+		"Cnd_Timer": "int",
+		"Act_EtherComm": "string, int, string, string, int, string, string",
+		"Act_AddRTC": "file_path.ini, repeatable",
+		"Act_SetTitle": "int",
+		"Act_SetOffer": "int",
+		"Cnd_LocEnter": "string, string",
+		"Cnd_MsnResponse": "string",
+		"Act_RemoveRTC": "file_path.ini",
+		"Act_DeactTrig": "string",
+		"Act_RandomPop": "string",
+		"Act_SetNNState": "string, string",
+		"Act_SetNNObj": "string",
+		"Act_NNIds": "int",
+		"Cnd_PlayerLaunch": "string",
+		"Act_SpawnSolar": "string",
+		"Act_Cloak": "string, string",
+		"Act_RelocateShip": "string, int, int, int, float, float, float, float",
+		"Act_SpawnShip": "string",
+		"Act_Invulnerable": "string, string",
+		"Act_SetVibe": "string, string, int",
+		"Act_MarkObj": "string, string",
+		"Act_SetVibeShiptoLbl": "string, string, string",
+		"Act_GiveObjList": "string, string",
+		"Act_SpawnFormation": "string",
+		"Act_PlayerEnemyClamp": "int",
+		"Cnd_SpaceEnter": "string",
+		"Act_PlayMusic": "string, string, string, string, int, string",
+		"Act_CallThorn": "file_path.thn, r_cruiser",
+		"Cnd_CommComplete": "string",
+		"Act_SendComm": "string, string, string",
+		"Act_StartDialog": "string",
+		"Cnd_DistShip": "string, string, string, int",
+		"Act_PObjIdle": "string",
+		"Act_LightFuse": "string, string",
+		"Cnd_DistVec": "string, string, int, int, int, int",
+		"Act_AdjHealth": "string, float",
+		"Act_Destroy": "string",
+		"Act_DockRequest": "string",
+		"Cnd_HealthDec": "string, float",
+		"Act_SetInitialPlayerPos": "int",
+		"Cnd_SystemEnter": "string",
+		"Act_Save": "string, int",
+		"Act_SpawnLoot": "string",
+		"Cnd_LootAcquired": "string, string",
+		"Cnd_SystemExit": "string",
+		"Act_MovePlayer": "int",
+		"Cnd_NPCSystemEnter": "string, string",
+		"Act_Jumper": "string, string",
+		"Cnd_ProjHit": "string, int",
+		"Act_NagDistLeaving": "string, string, string",
+		"Act_NagOff": "string",
+		"Act_NagDistTowards": "string, string, string, string, int, int, string",
+		"Act_SetLifeTime": "string, int",
+		"Act_RemoveCargo": "string",
+		"Act_RandomPopSphere": "int",
+		"Act_AddAmbient": "file_path.thn, Equipment, Li01_01_Base",
+		"Act_RemoveAmbient": "file_path.thn",
+		"Act_SetVibeLbltoShip": "string, string, string",
+		"Act_PlayerCanDock": "string, string",
+		"Cnd_WatchTrigger": "string, string",
+		"Cnd_LaunchComplete": "string",
+		"repeatable": "string",
+		"Act_PobjIdle": "string",
+		"Act_SetVibeOfferBaseHack": "string",
+		"Cnd_InSpace": "string",
+		"Act_NNPath": "int",
+		"Cnd_LocExit": "string, string",
+		"Act_RpopTLAttacksEnabled": "string",
+		"Act_RpopAttClamp": "string",
+		"Act_PlayerCanTradelane": "string",
+		"Cnd_TLEntered": "string, string, string",
+		"Act_LockManeuvers": "string",
+		"Cnd_BaseExit": "string",
+		"Cnd_TLExited": "string, string",
+		"Act_EnableManeuver": "string, string",
+		"Act_SetNNHidden": "string, string",
+		"Act_SetPriority": "string, string",
+		"Cnd_PlayerManeuver": "string, string",
+		"Act_SetVibeShipToLbl": "string, string, string",
+		"Act_NagGreet": "string, string",
+		"Cnd_ProjHitShipToLbl": "string, int, string",
+		"Act_DisableTradelane": "string",
+		"Act_GiveNNObjs": "string",
+		"Act_Ethercomm": "string, int, string, string, int, string, string",
+		"Cnd_WatchVibe": "string, string, float",
+		"Act_PlaySoundEffect": "string",
+		"Cnd_DistCircle": "string, string",
+		"Act_Popupdialog": "int",
+		"Cnd_PopUpDialog": "string",
+		"Act_StaticCam": "int",
+		"Cnd_ProjHitShiptoLbl": "string, int, string",
+		"Act_SetLifetime": "string, int",
+		"Act_GiveMB": "string, string",
+		"Act_Lightfuse": "string, string",
+		"Act_DebugMsg": "string, string",
+		"Cnd_CharSelect": "string, string, string",
+		"Cnd_InZone": "string, string, string",
+		"Cnd_TetherBroke": "string, string, int, int, int",
+		"Cnd_InTradelane": "string, string",
+		"Act_DisableFriendlyFire": "string",
+		"Act_NagClamp": "string",
+		"Act_HostileClamp": "string",
+		"Cnd_HasMsn": "string",
+		"Cnd_JumpInComplete": "string",
+		"Cnd_DistVecLbL": "string, string, string, int, int, int, int",
+		"Cnd_RTCDone": "file_path.ini",
+		"Act_EnableEnc": "string"
+	},
+	"CharacterEncounter": {
+		"Location": "string, string",
+		"action": "file_path.thn",
+		"autoplay": "string",
+		"relocate_player": "string",
+		"start_room": "string",
+		"accept": "file_path.thn",
+		"decline": "file_path.thn",
+		"offer": "file_path.thn",
+		"decision": "file_path.thn",
+		"mission_text_id": "int",
+		"nooffer_text_id": "int",
+		"reject": "file_path.thn"
+	},
+	"Reserve": {
+		"spot": "string"
+	},
+	"Char": {
+		"npc": "string",
+		"actor": "string",
+		"fidget": "file_path.thn",
+		"spot": "string"
+	},
+	"NPCShipArch": {
+		"nickname": "string",
+		"loadout": "string",
+		"level": "string",
+		"ship_archetype": "string",
+		"pilot": "string",
+		"state_graph": "string",
+		"npc_class": "string, string"
+	},
+	"Mission": {
+		"npc_ship_file": "file_path.ini",
+		"mission_title": "int",
+		"mission_offer": "int",
+		"reward": "int"
+	},
+	"NNObjective": {
+		"nickname": "string",
+		"state": "string",
+		"type": "string, int"
+	},
+	"MsnShip": {
+		"nickname": "string",
+		"NPC": "string",
+		"radius": "string",
+		"label": "string",
+		"position": "int",
+		"orientation": "float",
+		"jumper": "string",
+		"random_name": "string",
+		"rel_pos": "int",
+		"init_objectives": "string",
+		"Radius": "string",
+		"cargo": "string, int",
+		"arrival_obj": "string"
+	},
+	"MsnFormation": {
+		"nickname": "string",
+		"position": "int",
+		"orientation": "float",
+		"formation": "string",
+		"ship": "string",
+		"rel_pos": "int"
+	},
+	"MsnSolar": {
+		"nickname": "string",
+		"system": "string",
+		"position": "int",
+		"orientation": "int",
+		"string_id": "int",
+		"faction": "string",
+		"archetype": "string",
+		"loadout": "string",
+		"label": "string",
+		"base": "string",
+		"voice": "string",
+		"radius": "string",
+		"pilot": "string",
+		"Radius": "string",
+		"costume": "string, string",
+		"visit": "string"
+	},
+	"MsnLoot": {
+		"nickname": "string",
+		"archetype": "string",
+		"string_id": "int",
+		"position": "string, string, int",
+		"velocity": "int",
+		"equip_amount": "int",
+		"health": "int",
+		"can_jettison": "string",
+		"rel_pos_obj": "string",
+		"rel_pos_offset": "int",
+		"Can_Jettison": "string"
+	},
+	"MsnRandEnc": {
+		"nickname": "string",
+		"encounter_type": "string",
+		"label": "string",
+		"attacker_rep_name": "string",
+		"target_ship_name": "string",
+		"activation_type": "string, int, int",
+		"formation": "string, int, int, int, string, int",
+		"num_forms": "int"
+	},
+	"ObjList": {
+		"system": "string",
+		"nickname": "string",
+		"Delay": "int",
+		"Follow": "string, int, int, int, int",
+		"BreakFormation": "string",
+		"GotoShip": "string, string, int, string",
+		"StayInRange": "string, int",
+		"GotoVec": "string, int, int, int, int, string",
+		"Dock": "string",
+		"SetPriority": "string",
+		"FollowPlayer": "string, string",
+		"SetLifetime": "int",
+		"MakeNewFormation": "string, string, string, string",
+		"StayOutofRange": "string, int",
+		"Avoidance": "string",
+		"Idle": "string",
+		"StayOutOfRange": "int",
+		"GotoSpline": "string, int, int, int, int, int, int, int, int, int, int, int, int, int, string, int",
+		"avoidance": "string",
+		"SetLifeTime": "int"
+	},
+	"Dialog": {
+		"nickname": "string",
+		"system": "string",
+		"line": "string, string, string, int, string",
+		"Line": "string, string, string"
+	},
+	"MetaBehavior": {
+		"nickname": "string",
+		"MB_GotoGuide": "string, string, string, int, int, string, int, int"
+	},
+	"Objlist": {
+		"nickname": "string",
+		"GotoShip": "string, string, int, string",
+		"BreakFormation": "string",
+		"SetPriority": "string",
+		"FollowPlayer": "string, string, string, string, string, string, string, string",
+		"Follow": "string, int, int, int, int",
+		"StayInRange": "string, int",
+		"Idle": "string",
+		"StayOutOfRange": "string, int, string",
+		"Dock": "string",
+		"MakeNewFormation": "string, string, string, string",
+		"GotoVec": "string, int, string, int, int, string, int"
+	},
+	"EncounterFormation": {
+		"ship_by_class": "int",
+		"pilot_job": "string",
+		"make_class": "string",
+		"formation_by_class": "string",
+		"behavior": "string",
+		"arrival": "string",
+		"allow_simultaneous_creation": "string",
+		"zone_creation_distance": "string",
+		"times_to_create": "string",
+		"longevity": "int",
+		"ship_by_npc_arch": "int",
+		"explicit_group": "string"
+	},
+	"Creation": {
+		"permutation": "string, int"
+	},
+	"RolloverTable": {
+		"map": "int"
+	},
+	"Interface": {
+		"option": "int"
+	},
+	"Audio": {
+		"option": "int"
+	},
+	"video": {
+		"option": "int"
+	},
+	"KnowledgeMapTable": {
+		"Map": "int"
+	},
+	"keymap=1.1": {},
+	"KeyCmd": {
+		"nickname": "string",
+		"ids_name": "int",
+		"ids_info": "int",
+		"state": "string",
+		"key": "string, string"
+	},
+	"KeyMap": {
+		"nickname": "string",
+		"key": "string"
+	},
+	"Group": {
+		"group_num": "int",
+		"name": "int"
+	},
+	"key": {
+		"id": "string"
+	},
+	"Images": {
+		"TgaPath": "file_path.interface\\intro\\images\\",
+		"ScreenType": "string",
+		"ScreenExit": "string",
+		"ScreenReset": "string",
+		"bDrawScripts": "string"
+	},
+	"InfocardMapTable": {
+		"Map": "int"
+	},
+	"HUD": {
+		"shapes": "file_path.ini"
+	},
+	"Receiver": {
+		"object": "file_path.3db",
+		"action": "string",
+		"shut": "float",
+		"open": "float",
+		"delay": "float",
+		"video_fovx": "int",
+		"speaker_rotate": "int",
+		"male_speaker_offset": "string, int, int",
+		"female_speaker_offset": "string, int, int",
+		"backdrop": "string",
+		"static": "int",
+		"win_pos": "float",
+		"win_size": "float",
+		"btn_pos": "string, string, int",
+		"fly_time": "int",
+		"tool_tip_id": "int"
+	},
+	"Waypoint": {},
+	"Status": {},
+	"Target": {},
+	"Core": {},
+	"ContactList": {},
+	"Maneuvers": {
+		"maneuver": "file_path.3db"
+	},
+	"Steer": {
+		"radius": "int",
+		"range": "int",
+		"color": "int",
+		"size": "int"
+	},
+	"Targetable_Objects": {},
+	"DamageIndicator": {},
+	"CruiseProgress": {},
+	"Montage": {
+		"size": "int",
+		"num_pages": "int",
+		"interface\\HUD\\HUD_contactall.3db": "file_path.018000",
+		"interface\\HUD\\HUD_contactfrieghter.3db": "file_path.012000",
+		"interface\\HUD\\HUD_contactgroup.3db": "file_path.012000",
+		"interface\\HUD\\HUD_contactimportant.3db": "file_path.018000",
+		"interface\\HUD\\HUD_contactjumpgate.3db": "file_path.016000",
+		"interface\\HUD\\HUD_contactlootabledepot.3db": "file_path.016000",
+		"interface\\HUD\\HUD_contactnomad.3db": "file_path.016000",
+		"interface\\HUD\\HUD_contactplanet.3db": "file_path.016000",
+		"interface\\HUD\\HUD_contactship.3db": "file_path.016000",
+		"interface\\HUD\\HUD_contactstation.3db": "file_path.016000",
+		"interface\\HUD\\HUD_contacttradelane.3db": "file_path.016000",
+		"interface\\HUD\\HUD_contacttransport.3db": "file_path.016000",
+		"interface\\HUD\\HUD_contactwaypoint.3db": "file_path.016000",
+		"interface\\HUD\\HUD_contactweaponplat.3db": "file_path.016000",
+		"interface\\HUD\\HUD_formation.3db": "file_path.022000",
+		"interface\\HUD\\HUD_nextenemy.3db": "file_path.022000",
+		"interface\\HUD\\HUD_playershipinfo.3db": "file_path.023200",
+		"interface\\HUD\\HUD_targetedobject.3db": "file_path.022000",
+		"interface\\HUD\\HUD_weaponlist.3db": "file_path.023200",
+		"interface\\NeuroNet\\Inventory\\x.3db": "file_path.021700",
+		"interface\\NeuroNet\\icons\\NN_Chat.3db": "file_path.tga, 0",
+		"interface\\NeuroNet\\icons\\NN_Inventory.3db": "file_path.tga, 0",
+		"interface\\NeuroNet\\icons\\NN_PlayerStatus.3db": "file_path.tga, 0",
+		"interface\\NeuroNet\\icons\\NN_info.3db": "file_path.tga, 0",
+		"interface\\NeuroNet\\icons\\NN_request.3db": "file_path.tga, 0",
+		"interface\\NeuroNet\\icons\\NN_storystar.3db": "file_path.tga, 0",
+		"interface\\hud\\HUD_communication.3db": "file_path.022000",
+		"interface\\hud\\HUD_contactlist.3db": "file_path.022000",
+		"interface\\hud\\HUD_infocard.3db": "file_path.022000",
+		"interface\\hud\\HUD_nextsub.3db": "file_path.022000",
+		"interface\\hud\\HUD_previoussub.3db": "file_path.022000",
+		"interface\\hud\\HUD_repairactivate.3db": "file_path.022000",
+		"interface\\hud\\HUD_scanshipinactive.3db": "file_path.022000",
+		"interface\\hud\\HUD_shieldgaugeicon.3db": "file_path.023200",
+		"interface\\hud\\HUD_tractorbeam2.3db": "file_path.022000",
+		"interface\\hud\\HUD_trade.3db": "file_path.022000",
+		"interface\\hud\\hud_ShipInfo_button.3db": "file_path.tga, 0",
+		"interface\\hud\\hud_ShipTarget.3db": "file_path.tga, 0",
+		"interface\\HUD\\HUD_chat.3db": "file_path.012000",
+		"interface\\HUD\\HUD_contactbattleship.3db": "file_path.016000",
+		"interface\\HUD\\HUD_contactloot.3db": "file_path.016000",
+		"interface\\HUD\\HUD_contactotherplayers.3db": "file_path.012000",
+		"interface\\HUD\\MNVR_dock.3db": "file_path.023200",
+		"interface\\HUD\\MNVR_dock_gray.3db": "file_path.023200",
+		"interface\\HUD\\MNVR_formation.3db": "file_path.023200",
+		"interface\\HUD\\MNVR_formation_gray.3db": "file_path.023200",
+		"interface\\HUD\\MNVR_freeflight.3db": "file_path.023200",
+		"interface\\HUD\\MNVR_freeflight_gray.3db": "file_path.023200",
+		"interface\\HUD\\MNVR_goto.3db": "file_path.023200",
+		"interface\\HUD\\MNVR_goto_gray.3db": "file_path.023200",
+		"interface\\HUD\\hud_mnvrwarp.3db": "file_path.022000",
+		"interface\\NeuroNet\\icons\\NN_Map.3db": "file_path.tga, 0",
+		"texture": "int",
+		"CurrentTargetCorner": "string",
+		"NSArrowBackground": "string",
+		"CurrentTargetArrow": "string",
+		"CurrentTargetArrowHat": "string",
+		"CurrentTargetArrowQuotes": "string",
+		"CurrentTargetArrowOutline": "string",
+		"CurrentTargetHat": "string",
+		"NSTargetHat": "string",
+		"NSTargetArrow": "string",
+		"WaypointTarget": "string",
+		"LootArrow": "string",
+		"WaypointArrow": "string",
+		"PlayerArrow": "string",
+		"LootArrowBackground": "string",
+		"PlayerArrowBackground": "string",
+		"WaypointArrowBackground": "string",
+		"Dummy1": "string",
+		"CurrentTargetTalking": "string",
+		"NSTargetTalking": "string",
+		"PlayerTalking": "string"
+	},
+	"LightAnim": {
+		"name": "string",
+		"frame": "float"
+	},
+	"JumpShipEffect": {
+		"jump_out_effect": "string",
+		"jump_in_effect": "string"
+	},
+	"JumpGateEffect": {
+		"nickname": "string",
+		"glow_ring_effect": "string, string",
+		"glow_ring_hp": "string, string",
+		"glow_create_time": "int",
+		"jump_out_time": "int",
+		"jump_out_tunnel_time": "int",
+		"jump_in_tunnel_time": "int",
+		"jump_in_time": "int",
+		"kill_time_before_done": "float",
+		"jump_tunnel_effect": "string",
+		"jump_tunnel": "string",
+		"jump_ambient": "int",
+		"jump_background_color": "int"
+	},
+	"gate_tunnel": {
+		"nickname": "string",
+		"write_depth_buffer": "string",
+		"num_spline_control_points": "int",
+		"x_range": "int",
+		"y_range": "int",
+		"z_range": "int",
+		"min_radius": "int",
+		"max_radius": "int",
+		"far_radius_factor": "string",
+		"min_speed": "float",
+		"max_speed": "float",
+		"time_to_max_speed": "int",
+		"fade_distance": "float",
+		"near_alpha": "int",
+		"far_alpha": "int",
+		"num_t_steps": "int",
+		"num_s_steps": "int",
+		"min_rotation": "int",
+		"max_rotation": "int",
+		"min_rgb": "string, string, int",
+		"max_rgb": "int"
+	},
+	"layer": {
+		"texture": "string",
+		"color": "int",
+		"near_alpha_factor": "float",
+		"far_alpha_factor": "float",
+		"radius_factor": "int",
+		"u_offset": "float",
+		"v_offset": "float",
+		"du": "float",
+		"dv": "float",
+		"v_scale": "int"
+	},
+	"fuse": {
+		"name": "string",
+		"lifetime": "int",
+		"death_fuse": "string"
+	},
+	"start_effect": {
+		"effect": "string",
+		"hardpoint": "string",
+		"at_t": "float",
+		"attached": "string",
+		"pos_offset": "string, string, string",
+		"ori_offset": "int",
+		"particles": "string"
+	},
+	"destroy_group": {
+		"at_t": "string",
+		"group_name": "string",
+		"fate": "string"
+	},
+	"destroy_hp_attachment": {
+		"at_t": "float",
+		"hardpoint": "string",
+		"fate": "string"
+	},
+	"destroy_root": {
+		"at_t": "int"
+	},
+	"make_invincible": {
+		"turn_on": "string"
+	},
+	"dump_cargo": {
+		"at_t": "float",
+		"origin_hardpoint": "string"
+	},
+	"ignite_fuse": {
+		"at_t": "string",
+		"fuse": "string",
+		"fuse_t": "string"
+	},
+	"impulse": {
+		"at_t": "int",
+		"hardpoint": "string",
+		"pos_offset": "int",
+		"radius": "int",
+		"force": "int",
+		"damage": "string"
+	},
+	"start_cam_particles": {
+		"effect": "string",
+		"at_t": "int",
+		"pos_offset": "string, string, int",
+		"ori_offset": "string, string, string"
+	},
+	"tumble": {
+		"at_t": "string",
+		"ang_drag_scale": "float",
+		"turn_throttle_z": "float",
+		"turn_throttle_x": "string, float",
+		"turn_throttle_y": "string, float",
+		"throttle": "int"
+	},
+	"damage_root": {
+		"at_t": "float",
+		"damage_type": "string",
+		"hitpoints": "int"
+	},
+	"damage_group": {
+		"group_name": "string",
+		"at_t": "float",
+		"damage_type": "string",
+		"hitpoints": "int"
+	},
+	"Debris": {
+		"nickname": "string",
+		"death_method": "string",
+		"lifetime": "string, int",
+		"linear_drag": "float",
+		"angular_drag": "float",
+		"trail": "string",
+		"explosion": "string",
+		"rotation_inertia": "int"
+	},
+	"explosion": {
+		"nickname": "string",
+		"lifetime": "string, string",
+		"process": "string",
+		"effect": "string, string",
+		"debris_type": "string, int",
+		"innards_debris_start_time": "string",
+		"debris_impulse": "int",
+		"num_child_pieces": "int",
+		"innards_debris_num": "int",
+		"innards_debris_radius": "int",
+		"innards_debris_object": "string",
+		"radius": "int",
+		"hull_damage": "int",
+		"strength": "int",
+		"impulse": "int",
+		"energy_damage": "int"
+	},
+	"Simple": {
+		"nickname": "string",
+		"DA_archetype": "file_path.cmp",
+		"material_library": "file_path.mat",
+		"Mass": "int",
+		"mass": "int",
+		"envmap_material": "string",
+		"explosion": "string",
+		"cockpit": "file_path.ini",
+		"phantom_physics": "string"
+	},
+	"EffectType": {
+		"nickname": "string",
+		"priority": "int",
+		"generic_priority": "int",
+		"lod_type": "string",
+		"radius": "int",
+		"visibility": "string",
+		"update": "string",
+		"run_time": "int",
+		"pbubble": "int"
+	},
+	"VisEffect": {
+		"nickname": "string",
+		"alchemy": "file_path.ale",
+		"effect_crc": "int",
+		"textures": "file_path.txm"
+	},
+	"TrueType": {
+		"font": "string",
+		"nickname": "string",
+		"fixed_height": "float"
+	},
+	"Style": {
+		"name": "string",
+		"font": "int",
+		"bold": "string",
+		"italic": "string",
+		"underline": "string",
+		"color": "string, int, string",
+		"justify": "string"
+	},
+	"WeaponType": {
+		"nickname": "string",
+		"shield_mod": "string, float"
+	},
+	"Good": {
+		"nickname": "string",
+		"equipment": "string",
+		"category": "string",
+		"price": "int",
+		"item_icon": "file_path.3db",
+		"combinable": "string",
+		"ids_name": "int",
+		"ids_info": "int",
+		"shop_archetype": "file_path.cmp",
+		"material_library": "file_path.mat",
+		"DA_archetype": "file_path.cmp"
+	},
+	"Power": {
+		"nickname": "string",
+		"DA_archetype": "file_path.3db",
+		"hit_pts": "int",
+		"mass": "int",
+		"volume": "string",
+		"capacity": "int",
+		"charge_rate": "int",
+		"material_library": "file_path.mat",
+		"ids_name": "int",
+		"ids_info": "int",
+		"thrust_capacity": "int",
+		"thrust_charge_rate": "int",
+		"lootable": "string",
+		"phantom_physics": "string"
+	},
+	"Scanner": {
+		"nickname": "string",
+		"ids_name": "int",
+		"ids_info": "int",
+		"volume": "string",
+		"mass": "int",
+		"material_library": "file_path.mat",
+		"DA_archetype": "file_path.3db",
+		"range": "int",
+		"cargo_scan_range": "int",
+		"lootable": "string"
+	},
+	"Tractor": {
+		"nickname": "string",
+		"ids_name": "int",
+		"ids_info": "int",
+		"volume": "string",
+		"mass": "int",
+		"material_library": "file_path.mat",
+		"DA_archetype": "file_path.3db",
+		"max_length": "int",
+		"reach_speed": "int",
+		"color": "int",
+		"operating_effect": "string",
+		"tractor_complete_snd": "string",
+		"lootable": "string"
+	},
+	"LootCrate": {
+		"nickname": "string",
+		"DA_archetype": "file_path.3db",
+		"LODranges": "string, int, int",
+		"hit_pts": "int",
+		"mass": "int",
+		"explosion_arch": "string"
+	},
+	"RepairKit": {
+		"nickname": "string",
+		"ids_name": "int",
+		"ids_info": "int",
+		"volume": "string",
+		"mass": "int",
+		"hit_pts": "int",
+		"loot_appearance": "string",
+		"units_per_container": "int",
+		"lootable": "string"
+	},
+	"CounterMeasure": {
+		"nickname": "string",
+		"hit_pts": "int",
+		"loot_appearance": "string",
+		"units_per_container": "int",
+		"one_shot_sound": "string",
+		"const_effect": "string",
+		"lifetime": "int",
+		"DA_archetype": "file_path.cmp",
+		"material_library": "file_path.mat",
+		"ids_name": "int",
+		"ids_info": "int",
+		"mass": "int",
+		"volume": "string",
+		"owner_safe_time": "int",
+		"force_gun_ori": "string",
+		"requires_ammo": "string",
+		"ammo_limit": "int",
+		"linear_drag": "float",
+		"range": "int",
+		"diversion_pctg": "int"
+	},
+	"CounterMeasureDropper": {
+		"nickname": "string",
+		"ids_name": "int",
+		"ids_info": "int",
+		"DA_archetype": "file_path.3db",
+		"material_library": "file_path.mat",
+		"HP_child": "string",
+		"hit_pts": "int",
+		"explosion_resistance": "float",
+		"debris_type": "string",
+		"parent_impulse": "int",
+		"child_impulse": "int",
+		"volume": "int",
+		"mass": "int",
+		"power_usage": "int",
+		"refire_delay": "int",
+		"muzzle_velocity": "int",
+		"flash_particle_name": "string",
+		"flash_radius": "int",
+		"light_anim": "string",
+		"projectile_archetype": "string",
+		"separation_explosion": "string",
+		"AI_range": "int",
+		"lootable": "string"
+	},
+	"ShieldBattery": {
+		"nickname": "string",
+		"ids_name": "int",
+		"ids_info": "int",
+		"volume": "string",
+		"mass": "int",
+		"hit_pts": "int",
+		"loot_appearance": "string",
+		"units_per_container": "int",
+		"lootable": "string"
+	},
+	"BaseGood": {
+		"base": "string",
+		"MarketGood": "string, string, int, int, int, string, int",
+		"Marketgood": "string, string, int, int, int, string, int"
+	},
+	"Light": {
+		"nickname": "string",
+		"bulb_size": "float",
+		"glow_size": "int",
+		"color": "string, string, string",
+		"flare_cone": "int",
+		"min_color": "int",
+		"inherit": "string",
+		"avg_delay": "float",
+		"blink_duration": "float",
+		"intensity": "int",
+		"glow_color": "int",
+		"lightsource_cone": "int",
+		"always_on": "string",
+		"docking_light": "string"
+	},
+	"Cockpit": {
+		"mesh": "file_path.cmp",
+		"int_brightness": "float",
+		"head_turn": "int"
+	},
+	"TurretCamera": {
+		"tether": "string, string, int",
+		"yaw_rotate_speed": "int",
+		"pitch_rotate_speed": "int",
+		"accel_speed": "int"
+	},
+	"RearViewCamera": {
+		"view_position": "string, string, int"
+	},
+	"Package": {
+		"nickname": "string",
+		"strid_name": "int",
+		"strid_desc": "int",
+		"ship": "string",
+		"loadout": "string",
+		"money": "int"
+	},
+	"Faction": {
+		"nickname": "string",
+		"rep_group": "string",
+		"base": "string",
+		"Package": "string",
+		"Pilot": "string"
+	},
+	"Costume": {
+		"nickname": "string",
+		"head": "string",
+		"body": "string",
+		"righthand": "string",
+		"lefthand": "string",
+		"accessory": "string"
+	},
+	"Animations": {
+		"anim": "file_path.anm"
+	},
+	"DetailSwitchTable": {
+		"switch": "int"
+	},
+	"PetalAnimations": {
+		"anim": "file_path.anm"
+	},
+	"Skeleton": {
+		"sex": "string"
+	},
+	"Body": {
+		"nickname": "string",
+		"mesh": "file_path.dfm"
+	},
+	"Head": {
+		"nickname": "string",
+		"mesh": "file_path.dfm"
+	},
+	"RightHand": {
+		"nickname": "string",
+		"mesh": "file_path.dfm"
+	},
+	"LeftHand": {
+		"nickname": "string",
+		"mesh": "file_path.dfm"
+	},
+	"Accessory": {
+		"nickname": "string",
+		"mesh": "file_path.3db",
+		"hardpoint": "string",
+		"body_hardpoint": "string"
+	},
+	"Voice": {
+		"nickname": "string",
+		"script": "string",
+		"extend": "string"
+	},
+	"CFG": {
+		"ear_doppler_factor": "float",
+		"ducking_rtc_down_by": "int",
+		"ducking_rtc_down_time": "float",
+		"default_crv_pitch": "string",
+		"default_crv_attenuation": "string",
+		"music_fade_time": "int",
+		"cross_fade_silence": "int",
+		"cockpit_attenuation": "string",
+		"ducking_spaceflight_down_by": "int",
+		"ducking_spaceflight_down_time": "float",
+		"ducking_spaceflight_up_time": "float",
+		"spaceflight_dialogue_pan_range": "int",
+		"ducking_comm_down_by": "int",
+		"ducking_comm_down_time": "float",
+		"ducking_comm_up_time": "float",
+		"master_music": "string",
+		"master_ambient": "string",
+		"master_interface": "string",
+		"master_sfx": "string",
+		"master_voice": "string"
+	},
+	"reverb": {
+		"nickname": "string",
+		"settings": "string, string, string"
+	}
+}
