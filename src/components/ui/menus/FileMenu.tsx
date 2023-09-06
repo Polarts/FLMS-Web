@@ -23,6 +23,10 @@ export default function FileMenu() {
         }, ".ini");
     }
 
+    function save() {
+        iniFileStore.toString();
+    }
+
     return (
         <Menu 
             menuButton={
@@ -59,6 +63,7 @@ export default function FileMenu() {
             <IconMenuItem
                 icon={mdiContentSaveOutline}
                 label="Save"
+                onClick={save}
             />
             <IconMenuItem
                 icon={mdiContentSaveMoveOutline}

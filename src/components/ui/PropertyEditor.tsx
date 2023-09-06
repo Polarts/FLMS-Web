@@ -16,8 +16,13 @@ function PropertyEditor() {
     const template = useMemo(() => {
         if (iniFileStore.selectedIniObj && selectedEntryKey) {
             const template = (templates as Dict<Dict<string>>)[selectedEntryKey];
-            Object.assign(template, selectedEntryValue)
-            return template;
+            if (template) {
+                Object.assign(template, selectedEntryValue);
+                return template;
+            } else {
+                console.error(`No template found for ${selectedEntryKey}, resorting to use the live object`)
+                return selectedEntryValue;
+            }
         }
         return {};
     }, [iniFileStore.selectedIniObjIdx, selectedEntryValueEntries])

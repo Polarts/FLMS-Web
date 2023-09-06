@@ -1,4 +1,4 @@
-import { IIniObject, IniValue } from "js-ini";
+import { IIniObject, IniValue, stringify } from "js-ini";
 import { action, computed, makeAutoObservable, makeObservable, observable, runInAction } from "mobx";
 import { Dict } from "../../utils/types";
 import BiniDataView from "../ini/BiniDataView";
@@ -31,7 +31,6 @@ export default class IniFileStore {
     public setKeyValue(key: string, value: IniValue) {
         const obj = Object.values(this.selectedIniObj)[0] as Dict<IniValue>;
         obj[key] = value;
-        console.log(obj);
     }
 
     constructor() {
@@ -89,5 +88,13 @@ export default class IniFileStore {
         const bini = new BiniDataView(new Uint8Array(buf));
         const biniResult = bini.readBiniFile(buf.byteLength);
         // TODO handle bini result
+    }
+
+    public toString() {
+        const stringifiedObjs = this.iniObjects.map(obj => {
+            return stringify(obj);
+        })
+        console.log(stringifiedObjs);
+        
     }
 }

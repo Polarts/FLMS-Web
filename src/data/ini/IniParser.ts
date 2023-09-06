@@ -5,7 +5,7 @@ import { Dict } from "../../utils/types";
 
 export function parseFromString(iniText: string) {
     const iniObjects: IIniObject[] = [];
-    const sectionTextMatches = [...iniText.matchAll(SECTION_REG)].map(s => s[0]);
+    const sectionTextMatches = [...iniText.matchAll(SECTION_REG)].map(s => s[0]);    
     sectionTextMatches.forEach(section => {
         if (section) {
             const parsed = parse(section);
