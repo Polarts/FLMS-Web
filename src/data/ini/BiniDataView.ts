@@ -3,8 +3,57 @@ import { Dict } from "../../utils/types";
 
 export type INIStruct = { [section: string]: Dict<String> };
 
+class BiniStringBlock {
+    private strings = new Map<number, string>();
+
+    constructor(
+        private block: string
+    ) { }
+
+    public get(offset: number): string {
+        let s = this.strings.get(offset);
+        if (!s) {
+            s = this.block.substring(offset, this.block.indexOf("\0", offset) - offset);
+            this.strings.set(offset, s);
+        }
+        return s;
+    }
+}
+
+class BiniSection {
+    // TODO implement
+}
+
+class BiniEntry {
+    // TODO implement
+}
+
+enum BiniValueTypes {
+    boolean = 0,
+    int32 = 1,
+    single = 2,
+    string = 3
+}
+
+class BiniBooleanValue {
+    // TODO implement
+}
+
+class BiniInt32Value {
+    // TODO implement
+}
+
+class BiniSingleValue {
+    // TODO implement
+}
+
+class BiniStringValue {
+    // TODO implement
+}
+
 /**
  * Extension of jDataView that reads BINI files.
+ * Translation of LibreLancer.Data.Ini.IniFile.cs
  */
 export default class BiniDataView extends jDataView {
 
@@ -33,7 +82,19 @@ export default class BiniDataView extends jDataView {
         if (fileTag === "BINI" && version === 1) {
 
             const stringBlockOffset = this.getReverseInt32();
+            if (stringBlockOffset > byteLength) throw "The string block offset was out of range: " + stringBlockOffset;
 
+            const sectionBlockOffset = this.tell();
+            this.seek(stringBlockOffset);
+            const stringBlockOffsetLength = byteLength - stringBlockOffset;
+            const stringBlock = new BiniStringBlock(this.getString(stringBlockOffsetLength));
+
+            this.seek(sectionBlockOffset);
+            
+            
+
+            return null;
+/*
             // Save position of data start to return to it later.
             const dataPos = this.tell();
             console.log(
@@ -113,7 +174,7 @@ export default class BiniDataView extends jDataView {
             }
 
             return retVal;
-
+*/
         } else return null;
     }
 }
